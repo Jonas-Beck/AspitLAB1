@@ -1,0 +1,71 @@
+.bg-lime-green{
+    background-color: #6aaf09;
+    opacity: 1;
+    border: none;
+}
+.bg-lime-green:hover{
+    background-color: #6aaf09;
+    opacity: 1;
+    border: none;
+}
+
+.bg-lime-green-border{
+    background-color: #79b72d;
+}
+.bg-footer{
+    background-color: #333333;
+}
+.bg-footer-icon-circle{
+    background-color: #444444;
+}
+.text-lime-green{
+    color: #70ad47;
+}
+
+.header-banner{
+    background-image: url("../Billedmaterialer/banner-bg.jpg");
+    background-color: rgb(185, 184, 184);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+}
+
+ul{
+    list-style-type: circle;
+}
+
+hr{
+    height: 3px;
+    border-radius: 5px;
+    opacity: 100%;
+    border: none;
+    width: 70px;
+}
+
+a > img{
+    width: 100%;
+    height: 100%;
+}
+
+.customer{
+    background-image: url(../Billedmaterialer/udtalelser-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+}
+
+.slider-background{
+    width: 150px;
+    height: 200px;
+}
+.footer-icon-circle{
+    width: 25px;
+    height: 25px;
+    border-radius: 15px;
+}
+@media only screen and (min-width: 576px) {
+    .slider-background{
+        height: 150px;
+        
+    }
+  }
