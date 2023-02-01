@@ -1,0 +1,65 @@
+body{
+    background-color: #0A192F;
+}
+
+.text-mint{
+    color: #62F9D5;
+}
+.text-navbar{
+    color: #A7B2CF !important;
+}
+.text-navbar:hover{
+    color: #62F9D5 !important; 
+}
+.text-name{
+    color: #CCD6F6;
+}
+.text-name:hover{
+    color: #CCD6F6;
+}
+
+.text-grey{
+    color:#8892B0;
+}
+.text-desc{
+    color:#838DAA;
+}
+
+.main-name{
+    font-size: 8vw !important;
+}
+.main-title{
+    font-size: 5vw !important;
+}
+.main-intro{
+    font-size: 3vw !important;
+}
+.about-image{
+    border: 1px solid #62F9D5;
+}
+
+.card-body{
+    background-color: #172944;
+}
+
+.btn-outline-info{
+    border-color: #62F9D5;
+    color: #62F9D5;
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+    background-color: #172944;
+    color: #CCD6F6;
+}
+
+@media only screen and (max-width: 600px) {
+    
+    .main-intro{
+        font-size: 6vw !important;
+    }
+    .main-name{
+        font-size: 13vw !important;
+    }
+    .main-title{
+        font-size: 9vw !important;
+    }
+  }
