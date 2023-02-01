@@ -11,27 +11,25 @@
 </head>
 <body>
     <!----------NAVBAR----------->
-    <nav class="navbar navbar-dark navbar-expand-md">
+    <nav class="navbar navbar-dark  navbar-expand-md">
         <div class="container-fluid">
-            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler ms-auto navbar-toggler-border" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <ul class="navbar-nav ms-auto gap-2 p-3">
+                <ul class="navbar-nav ms-auto gap-2 p-3 rounded-3">
+                    <!--------NAVBAR ITEMS-------->
                     <li class="nav-item">
-                        <a class="nav-link active text-navbar text-end" href="#top"><span class="text-mint">01.</span> Home</a>
+                        <a class="nav-link active text-navbar " href="#About"><span class="text-mint">01.</span> About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-navbar text-end" href="#About"><span class="text-mint">02.</span> About</a>
+                        <a class="nav-link active text-navbar " href="#Experience"><span class="text-mint">02.</span> Experience</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-navbar text-end" href="#Experience"><span class="text-mint">03.</span> Experience</a>
+                        <a class="nav-link active text-navbar " href="#Projects"><span class="text-mint">03.</span> Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-navbar text-end" href="#Projects"><span class="text-mint">04.</span> Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active text-navbar text-end" href="#Contact"><span class="text-mint">05.</span> Contact</a>
+                        <a class="nav-link active text-navbar " href="#Contact"><span class="text-mint">04.</span> Contact</a>
                     </li>
                 </ul>
             </div>
@@ -57,7 +55,7 @@
     <div class="container my-5 p-5"  id="About">
         <div class="row justify-content-center">
             <div class="col-12">
-                <h4 class="text-name text-center fs-2"><span class="text-mint">02.</span> About Me</h4>
+                <h4 class="text-name text-center fs-2"><span class="text-mint">01.</span> About Me</h4>
                 <hr class="text-white w-50 mx-auto">
             </div>
             <div class="col-12 col-md-10 col-lg-10 col-xl-6">
@@ -74,7 +72,7 @@
     <div class="container my-5 p-5" id="Experience">
         <div class="row justify-content-center">
             <div class="col-12">
-                <h4 class="text-name text-center fs-2"><span class="text-mint">03.</span> Experience</h4>
+                <h4 class="text-name text-center fs-2"><span class="text-mint">02.</span> Experience</h4>
                 <hr class="text-white w-50 mx-auto">
             </div>
             <div class="col-12 col-sm-12 col-md-10 col-lg-8">
@@ -90,7 +88,8 @@
                     </li>
                   </ul>
                   <div class="tab-content" id="pills-tabContent">
-                    <div class="tab-pane fade show active text-desc" id="pills-exp1" role="tabpanel" aria-labelledby="pills-exp1-tab">1 ipsum dolor sit amet consectetur, adipisicing elit. Doloribus doloremque dolorum eaque id cupiditate delectus eius pariatur dicta voluptas optio ea similique temporibus est autem expedita, magnam commodi velit ducimus.</div>
+                    <div class="tab-pane fade show active text-desc" id="pills-exp1" role="tabpanel" aria-labelledby="pills-exp1-tab">1 ipsum dolor sit amet consectetur, adipisicing elit. Doloribus doloremque dolorum eaque id cupiditate delectus eius pariatur dicta voluptas optio ea similique temporibus est autem expedita, magnam commodi v
+                        elit ducimus.</div>
                     <div class="tab-pane fade text-desc" id="pills-exp2" role="tabpanel" aria-labelledby="pills-exp2-tab">2 ipsum dolor sit amet consectetur, adipisicing elit. Doloribus doloremque dolorum eaque id cupiditate delectus eius pariatur dicta voluptas optio ea similique temporibus est autem expedita, magnam commodi velit ducimus.</div>
                     <div class="tab-pane fade text-desc" id="pills-exp3" role="tabpanel" aria-labelledby="pills-exp3-tab">3 ipsum dolor sit amet consectetur, adipisicing elit. Doloribus doloremque dolorum eaque id cupiditate delectus eius pariatur dicta voluptas optio ea similique temporibus est autem expedita, magnam commodi velit ducimus.</div>
                   </div>
@@ -102,77 +101,287 @@
     <div class="container my-5 p-5" id="Projects">
         <div class="row justify-content-center">
             <div class="col-12 ">
-                <h4 class="text-name text-center fs-2"><span class="text-mint">04.</span> Projects</h4>
+                <h4 class="text-name text-center fs-2"><span class="text-mint">03.</span> Projects</h4>
                 <hr class="text-white w-50 mx-auto">
             </div>
+            <!---------Filter for type of project (Web / Software)------->
+            <div class="col-12">
+                <ul class="nav nav-pills mb-3 justify-content-center" >
+                    <li class="nav-item">
+                      <button class="nav-link active text-name" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button" role="tab" aria-controls="pills-home" aria-selected="true">All</button>
+                    </li>
+                    <li class="nav-item">
+                      <button class="nav-link text-name" id="pills-web-tab" data-bs-toggle="pill" data-bs-target="#pills-web" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Web Development</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link text-name" id="pills-software-tab" data-bs-toggle="pill" data-bs-target="#pills-software" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Software Development</button>
+                      </li>
+                  </ul>
+            </div>
+            <div class="tab-content" id="pills-tabContent">
+                <!---ALL PROJECTS-->
+                <div class="tab-pane fade show active " id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab">
+                    <div class="row">
+                        <!-----PROJECT-1-->                    
+                        <div class="col-12 col-md-6 col-lg-4 p-3 ">
+                            <div class="card bg-secondary text-white" style="width: 100%;">
+                                <div class="card-header text-center text-name fw-semibold">Web Development</div>
+                                <img src="./img/ViborgHaveservice.PNG" class="card-img-top" alt="...">
+                                <div class="card-body rounded-bottom-2">
+                                <h5 class="card-title text-center text-name p-2 fw-bold">Viborg Haveservice</h5>
+                                <p class="card-text text-desc  card-clamp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat possimus ut, obcaecati, ex dolore fuga expedita deleniti provident blanditiis ad nostrum <span class="text-mint">React</span> natus deserunt dolores aliquam! Consequuntur laborum <span class="text-mint">Tailwind</span> amet culpa, nemo itaque maiores dicta?</p>
+                                <div class="d-flex justify-content-center gap-4 py-1">
+                                    <a href="#" target="_blank" class="btn btn-outline-info">Github</a>
+                                    <a href="#" target="_blank" class="btn btn-outline-info ">Visit Site</a>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-----PROJECT-2-->                    
+                        <div class="col-12 col-md-6 col-lg-4 p-3 ">
+                            <div class="card bg-secondary text-white" style="width: 100%;">
+                                <div class="card-header text-center text-name fw-semibold">Software Development</div>
+                                <img src="./img/ViborgHaveservice.PNG" class="card-img-top" alt="...">
+                                <div class="card-body rounded-bottom-2">
+                                <h5 class="card-title text-center text-name p-2 fw-bold">Viborg Haveservice</h5>
+                                <p class="card-text text-desc  card-clamp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat possimus ut, obcaecati, ex dolore fuga expedita deleniti provident blanditiis ad nostrum <span class="text-mint">React</span> natus deserunt dolores aliquam! Consequuntur laborum <span class="text-mint">Tailwind</span> amet culpa, nemo itaque maiores dicta?</p>
+                                <div class="d-flex justify-content-center gap-4 py-1">
+                                    <a href="#" target="_blank" class="btn btn-outline-info">Github</a>
+                                    <a href="#" target="_blank" class="btn btn-outline-info ">Visit Site</a>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-----PROJECT-3-->                    
+                        <div class="col-12 col-md-6 col-lg-4 p-3 ">
+                            <div class="card bg-secondary text-white " style="width: 100%;">
+                                <div class="card-header text-center text-name fw-semibold">Web Development</div>
+                                <img src="./img/ViborgHaveservice.PNG" class="card-img-top" alt="...">
+                                <div class="card-body rounded-bottom-2">
+                                <h5 class="card-title text-center text-name p-2 fw-bold">Viborg Haveservice</h5>
+                                <p class="card-text text-desc  card-clamp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat possimus ut, obcaecati, ex dolore fuga expedita deleniti provident blanditiis ad nostrum <span class="text-mint">React</span> natus deserunt dolores aliquam! Consequuntur laborum <span class="text-mint">Tailwind</span> amet culpa, nemo itaque maiores dicta?</p>
+                                <div class="d-flex justify-content-center gap-4 py-1">
+                                    <a href="#" target="_blank" class="btn btn-outline-info">Github</a>
+                                    <a href="#" target="_blank" class="btn btn-outline-info ">Visit Site</a>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-----PROJECT-4-->                    
+                        <div class="col-12 col-md-6 col-lg-4 p-3 ">
+                            <div class="card bg-secondary text-white " style="width: 100%;">
+                                <div class="card-header text-center text-name fw-semibold">Software Development</div>
+                                <img src="./img/ViborgHaveservice.PNG" class="card-img-top" alt="...">
+                                <div class="card-body rounded-bottom-2">
+                                <h5 class="card-title text-center text-name p-2 fw-bold">Viborg Haveservice</h5>
+                                <p class="card-text text-desc  card-clamp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat possimus ut, obcaecati, ex dolore fuga expedita deleniti provident blanditiis ad nostrum <span class="text-mint">React</span> natus deserunt dolores aliquam! Consequuntur laborum <span class="text-mint">Tailwind</span> amet culpa, nemo itaque maiores dicta?</p>
+                                <div class="d-flex justify-content-center gap-4 py-1">
+                                    <a href="#" target="_blank" class="btn btn-outline-info">Github</a>
+                                    <a href="#" target="_blank" class="btn btn-outline-info ">Visit Site</a>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-----PROJECT-5-->                    
+                        <div class="col-12 col-md-6 col-lg-4 p-3 ">
+                            <div class="card bg-secondary text-white " style="width: 100%;">
+                                <div class="card-header text-center text-name fw-semibold">Web Development</div>
+                                <img src="./img/ViborgHaveservice.PNG" class="card-img-top" alt="...">
+                                <div class="card-body rounded-bottom-2">
+                                <h5 class="card-title text-center text-name p-2 fw-bold">Viborg Haveservice</h5>
+                                <p class="card-text text-desc  card-clamp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat possimus ut, obcaecati, ex dolore fuga expedita deleniti provident blanditiis ad nostrum <span class="text-mint">React</span> natus deserunt dolores aliquam! Consequuntur laborum <span class="text-mint">Tailwind</span> amet culpa, nemo itaque maiores dicta?</p>
+                                <div class="d-flex justify-content-center gap-4 py-1">
+                                    <a href="#" target="_blank" class="btn btn-outline-info">Github</a>
+                                    <a href="#" target="_blank" class="btn btn-outline-info ">Visit Site</a>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-----PROJECT-6-->                    
+                        <div class="col-12 col-md-6 col-lg-4 p-3 ">
+                            <div class="card bg-secondary text-white " style="width: 100%;">
+                                <div class="card-header text-center text-name fw-semibold">Software Development</div>
+                                <img src="./img/ViborgHaveservice.PNG" class="card-img-top" alt="...">
+                                <div class="card-body rounded-bottom-2">
+                                <h5 class="card-title text-center text-name p-2 fw-bold">Viborg Haveservice</h5>
+                                <p class="card-text text-desc  card-clamp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat possimus ut, obcaecati, ex dolore fuga expedita deleniti provident blanditiis ad nostrum <span class="text-mint">React</span> natus deserunt dolores aliquam! Consequuntur laborum <span class="text-mint">Tailwind</span> amet culpa, nemo itaque maiores dicta?</p>
+                                <div class="d-flex justify-content-center gap-4 py-1">
+                                    <a href="#" target="_blank" class="btn btn-outline-info">Github</a>
+                                    <a href="#" target="_blank" class="btn btn-outline-info ">Visit Site</a>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-----WEB PROJECTS----->
+                <div class="tab-pane fade " id="pills-web" role="tabpanel" aria-labelledby="pills-web-tab">
+                    <div class="row">
+                        <!-----PROJECT-1-->                    
+                        <div class="col-12 col-md-6 col-lg-4 p-3 ">
+                            <div class="card bg-secondary text-white " style="width: 100%;">
+                                <div class="card-header text-center text-name fw-semibold">Web Development</div>
+                                <img src="./img/ViborgHaveservice.PNG" class="card-img-top" alt="...">
+                                <div class="card-body rounded-bottom-2">
+                                <h5 class="card-title text-center text-name p-2 fw-bold">Viborg Haveservice</h5>
+                                <p class="card-text text-desc  card-clamp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat possimus ut, obcaecati, ex dolore fuga expedita deleniti provident blanditiis ad nostrum <span class="text-mint">React</span> natus deserunt dolores aliquam! Consequuntur laborum <span class="text-mint">Tailwind</span> amet culpa, nemo itaque maiores dicta?</p>
+                                <div class="d-flex justify-content-center gap-4 py-1">
+                                    <a href="#" target="_blank" class="btn btn-outline-info">Github</a>
+                                    <a href="#" target="_blank" class="btn btn-outline-info ">Visit Site</a>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-----PROJECT-2-->                    
+                        <div class="col-12 col-md-6 col-lg-4 p-3 ">
+                            <div class="card bg-secondary text-white " style="width: 100%;">
+                                <div class="card-header text-center text-name fw-semibold">Web Development</div>
+                                <img src="./img/ViborgHaveservice.PNG" class="card-img-top" alt="...">
+                                <div class="card-body rounded-bottom-2">
+                                <h5 class="card-title text-center text-name p-2 fw-bold">Viborg Haveservice</h5>
+                                <p class="card-text text-desc  card-clamp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat possimus ut, obcaecati, ex dolore fuga expedita deleniti provident blanditiis ad nostrum <span class="text-mint">React</span> natus deserunt dolores aliquam! Consequuntur laborum <span class="text-mint">Tailwind</span> amet culpa, nemo itaque maiores dicta?</p>
+                                <div class="d-flex justify-content-center gap-4 py-1">
+                                    <a href="#" target="_blank" class="btn btn-outline-info">Github</a>
+                                    <a href="#" target="_blank" class="btn btn-outline-info ">Visit Site</a>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-----PROJECT-3-->                    
+                        <div class="col-12 col-md-6 col-lg-4 p-3 ">
+                            <div class="card bg-secondary text-white " style="width: 100%;">
+                                <div class="card-header text-center text-name fw-semibold">Web Development</div>
+                                <img src="./img/ViborgHaveservice.PNG" class="card-img-top" alt="...">
+                                <div class="card-body rounded-bottom-2">
+                                <h5 class="card-title text-center text-name p-2 fw-bold">Viborg Haveservice</h5>
+                                <p class="card-text text-desc  card-clamp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat possimus ut, obcaecati, ex dolore fuga expedita deleniti provident blanditiis ad nostrum <span class="text-mint">React</span> natus deserunt dolores aliquam! Consequuntur laborum <span class="text-mint">Tailwind</span> amet culpa, nemo itaque maiores dicta?</p>
+                                <div class="d-flex justify-content-center gap-4 py-1">
+                                    <a href="#" target="_blank" class="btn btn-outline-info">Github</a>
+                                    <a href="#" target="_blank" class="btn btn-outline-info ">Visit Site</a>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-----SOFTWARE PROJECTS---->
+                <div class="tab-pane fade " id="pills-software" role="tabpanel" aria-labelledby="pills-software-tab">
+                    <div class="row">
+                        <!-----PROJECT-1-->                    
+                        <div class="col-12 col-md-6 col-lg-4 p-3 ">
+                            <div class="card bg-secondary text-white " style="width: 100%;">
+                                <div class="card-header text-center text-name fw-semibold">Software Development</div>
+                                <img src="./img/ViborgHaveservice.PNG" class="card-img-top" alt="...">
+                                <div class="card-body rounded-bottom-2">
+                                <h5 class="card-title text-center text-name p-2 fw-bold">Viborg Haveservice</h5>
+                                <p class="card-text text-desc  card-clamp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat possimus ut, obcaecati, ex dolore fuga expedita deleniti provident blanditiis ad nostrum <span class="text-mint">React</span> natus deserunt dolores aliquam! Consequuntur laborum <span class="text-mint">Tailwind</span> amet culpa, nemo itaque maiores dicta?</p>
+                                <div class="d-flex justify-content-center gap-4 py-1">
+                                    <a href="#" target="_blank" class="btn btn-outline-info">Github</a>
+                                    <a href="#" target="_blank" class="btn btn-outline-info ">Visit Site</a>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-----PROJECT-2-->                    
+                        <div class="col-12 col-md-6 col-lg-4 p-3 ">
+                            <div class="card bg-secondary text-white " style="width: 100%;">
+                                <div class="card-header text-center text-name fw-semibold">Software Development</div>
+                                <img src="./img/ViborgHaveservice.PNG" class="card-img-top" alt="...">
+                                <div class="card-body rounded-bottom-2">
+                                <h5 class="card-title text-center text-name p-2 fw-bold">Viborg Haveservice</h5>
+                                <p class="card-text text-desc  card-clamp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat possimus ut, obcaecati, ex dolore fuga expedita deleniti provident blanditiis ad nostrum <span class="text-mint">React</span> natus deserunt dolores aliquam! Consequuntur laborum <span class="text-mint">Tailwind</span> amet culpa, nemo itaque maiores dicta?</p>
+                                <div class="d-flex justify-content-center gap-4 py-1">
+                                    <a href="#" target="_blank" class="btn btn-outline-info">Github</a>
+                                    <a href="#" target="_blank" class="btn btn-outline-info ">Visit Site</a>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-----PROJECT-3-->                    
+                        <div class="col-12 col-md-6 col-lg-4 p-3 ">
+                            <div class="card bg-secondary text-white " style="width: 100%;">
+                                <div class="card-header text-center text-name fw-semibold">Software Development</div>
+                                <img src="./img/ViborgHaveservice.PNG" class="card-img-top" alt="...">
+                                <div class="card-body rounded-bottom-2">
+                                <h5 class="card-title text-center text-name p-2 fw-bold">Viborg Haveservice</h5>
+                                <p class="card-text text-desc  card-clamp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat possimus ut, obcaecati, ex dolore fuga expedita deleniti provident blanditiis ad nostrum <span class="text-mint">React</span> natus deserunt dolores aliquam! Consequuntur laborum <span class="text-mint">Tailwind</span> amet culpa, nemo itaque maiores dicta?</p>
+                                <div class="d-flex justify-content-center gap-4 py-1">
+                                    <a href="#" target="_blank" class="btn btn-outline-info">Github</a>
+                                    <a href="#" target="_blank" class="btn btn-outline-info ">Visit Site</a>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+        </div>
+        
+        <div class="row">
             <!--------PROJECT 1--------->
-            <div class="col-12 col-md-6 col-lg-4 p-3 ">
+            <!-- <div class="col-12 col-md-6 col-lg-4 p-3 ">
                 <div class="card bg-secondary text-white border-0 " style="width: 100%;">
                     <img src="./img/ViborgHaveservice.PNG" class="card-img-top" alt="...">
                     <div class="card-body rounded-bottom-2">
                       <h5 class="card-title text-center text-name p-2 fw-bold">Viborg Haveservice</h5>
-                      <p class="card-text text-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat possimus ut, obcaecati, ex dolore fuga expedita deleniti provident blanditiis ad nostrum <span class="text-mint">Bootstrap5</span> natus deserunt dolores aliquam! Consequuntur laborum <span class="text-mint">SASS</span> amet culpa, nemo itaque maiores dicta?</p>
+                      <p class="card-text text-desc  card-clamp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat possimus ut, obcaecati, ex dolore fuga expedita deleniti provident blanditiis ad nostrum <span class="text-mint">Bootstrap5</span> natus deserunt dolores aliquam! Consequuntur laborum <span class="text-mint">SASS</span> amet culpa, nemo itaque maiores dicta?</p>
                       <div class="d-flex justify-content-center gap-4 py-1">
                         <a href="#" target="_blank" class="btn btn-outline-info" >Github</a>
                         <a href="#" target="_blank" class="btn btn-outline-info ">Visit Site</a>
                       </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!--------PROJECT 2--------->
-            <div class="col-12 col-md-6 col-lg-4 p-3 ">
+            <!-- <div class="col-12 col-md-6 col-lg-4 p-3 ">
                 <div class="card bg-secondary text-white border-0 " style="width: 100%;">
                     <img src="./img/ViborgHaveservice.PNG" class="card-img-top" alt="...">
                     <div class="card-body rounded-bottom-2">
                       <h5 class="card-title text-center text-name p-2 fw-bold">Viborg Haveservice</h5>
-                      <p class="card-text text-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat possimus ut, obcaecati, ex dolore fuga expedita deleniti provident blanditiis ad nostrum <span class="text-mint">Javascript</span> natus deserunt dolores aliquam! Consequuntur laborum <span class="text-mint">Node.js</span> amet culpa, nemo itaque maiores dicta?</p>
+                      <p class="card-text text-desc card-clamp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat possimus ut, obcaecati, ex dolore fuga expedita deleniti provident blanditiis ad nostrum <span class="text-mint">Javascript</span> natus deserunt dolores aliquam! Consequuntur laborum <span class="text-mint">Node.js</span> amet culpa, nemo itaque maiores dicta?</p>
                       <div class="d-flex justify-content-center gap-4 py-1">
                         <a href="#" target="_blank" class="btn btn-outline-info">Github</a>
                         <a href="#" target="_blank" class="btn btn-outline-info ">Visit Site</a>
                       </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!--------PROJECT 3--------->
-            <div class="col-12 col-md-6 col-lg-4 p-3 ">
+            <!-- <div class="col-12 col-md-6 col-lg-4 p-3 ">
                 <div class="card bg-secondary text-white border-0 " style="width: 100%;">
                     <img src="./img/ViborgHaveservice.PNG" class="card-img-top" alt="...">
                     <div class="card-body rounded-bottom-2">
                       <h5 class="card-title text-center text-name p-2 fw-bold">Viborg Haveservice</h5>
-                      <p class="card-text text-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat possimus ut, obcaecati, ex dolore fuga expedita deleniti provident blanditiis ad nostrum <span class="text-mint">React</span> natus deserunt dolores aliquam! Consequuntur laborum <span class="text-mint">Tailwind</span> amet culpa, nemo itaque maiores dicta?</p>
+                      <p class="card-text text-desc  card-clamp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat possimus ut, obcaecati, ex dolore fuga expedita deleniti provident blanditiis ad nostrum <span class="text-mint">React</span> natus deserunt dolores aliquam! Consequuntur laborum <span class="text-mint">Tailwind</span> amet culpa, nemo itaque maiores dicta?</p>
                       <div class="d-flex justify-content-center gap-4 py-1">
                         <a href="#" target="_blank" class="btn btn-outline-info">Github</a>
                         <a href="#" target="_blank" class="btn btn-outline-info ">Visit Site</a>
                       </div>
                     </div>
                 </div>
-            </div>
-            
+            </div> -->
         </div>
     </div>
     <!-------------CONTACT------------->
     <div class="container my-5 p-5" id="Contact">
         <div class="row justify-content-center">
             <div class="col-12 ">
-                <h4 class="text-name text-center fs-2"><span class="text-mint">05.</span> Contact</h4>
+                <h4 class="text-name text-center fs-2"><span class="text-mint">04.</span> Contact</h4>
                 <hr class="text-white w-50 mx-auto">
             </div>
-            <div class="col-12 d-flex justify-content-center gap-5 mt-4">
-                <a href="#"><i class="fa-brands fa-linkedin-in text-mint fa-xl"></i>
-                </a>
-                <a href="https://github.com/Jonas-Beck"><i class="fa-brands fa-github text-mint fa-xl"></i></a>
-                <a href="mailto:jona63m2@edu.campusvejle.dk"><i class="fa-regular fa-envelope text-mint fa-xl"></i></a>
+            <div class="col-12 d-flex justify-content-center gap-5  ">
+                <ul class="social-icons">
+                    <li><a href="#" class="social-square"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                    <li><a href="https://github.com/Jonas-Beck" class="social-square"><i class="fa fa-github"></i></a></li>
+                    <li><a href="#" class="social-square"><i class="fa fa-stack-overflow"></i></a></li>
+                    <li><a href="#" class="social-square"><i class="fa-regular fa-envelope"></i></a></li>
+                  </ul>
             </div>
-            <div class="col-12 p-5 text-center">
-                <a href="mailto:jona63m2@edu.campusvejle.dk" target="_blank" class="btn btn-outline-info btn-lg">Get in Touch</a>
+            <div class="col-12 p-2 text-center">
+                <a href="mailto:jona63m2@edu.campusvejle.dk" target="_blank" class="btn btn-outline-info btn-lg ">Get in Touch</a>
             </div>
         </div>
     </div>
-
-
-
-
-
 
 
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

@@ -25,6 +25,7 @@ body{
     color:#838DAA;
 }
 
+
 .main-name{
     font-size: 8vw !important;
 }
@@ -38,20 +39,139 @@ body{
     border: 1px solid #62F9D5;
 }
 
-.card-body{
+.card-body, .card-header{
     background-color: #172944;
 }
+
+.card{
+    border: 0,5px solid #62F9D5;
+ }
+
+ .card:hover{
+    box-shadow: 1px 1px grey;
+    
+ }
+
+.navbar-toggler-icon{
+    border-color: rgb(98, 249, 213);
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(98, 249, 213)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+
+}
+.navbar-toggler-border{
+    border-color: rgb(98, 249, 213);
+    border: 1px solid rgb(98, 249, 213);
+
+}
+/* Remove delay when clicking burger menu icon on mobile*/
+
+.collapsing {
+    -webkit-transition: none;
+    transition: none;
+    display: none;
+}
+
+/*  Remove Bootstrap5 Outline/boxshadow from button*/ 
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.card-clamp{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 8; /* number of lines to show */
+            line-clamp: 8; 
+    -webkit-box-orient: vertical;
+ }
+
 
 .btn-outline-info{
     border-color: #62F9D5;
     color: #62F9D5;
 }
+
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link{
     background-color: #172944;
     color: #CCD6F6;
-}
+ }
 
-@media only screen and (max-width: 600px) {
+
+
+
+ /*  Social media Animation  */
+  .social-icons {
+    padding: 0;
+    list-style: none;
+    margin: 1em;
+  }
+  .social-icons li {
+    display: inline-block;
+    margin: 0.15em;
+    position: relative;
+    font-size: 1.2em;
+  }
+  .social-icons i {
+    color: #62F9D5;
+    position: absolute;
+    top: 21px;
+    left: 21px;
+    transition: all 265ms ease-out;
+  }
+  .social-icons a {
+    display: inline-block;
+  }
+  .social-icons a:before {
+    transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    content: " ";
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    display: block;
+    background-color: #172944;
+
+    transition: all 265ms ease-out;
+  }
+  .social-icons a:hover:before {
+    transform: scale(0);
+    transition: all 265ms ease-in;
+  }
+  .social-icons a:hover i {
+    transform: scale(2.2);
+    -ms-transform: scale(2.2);
+    -webkit-transform: scale(2.2);
+    background-color: #172944;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 265ms ease-in;
+  }
+  .social-icons a.social-square:before {
+    background-color: #172944;
+    border-radius: 10%;
+  }
+  .social-icons a.social-square:hover:before {
+    transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -webkit-transform: scale(-180deg);
+    border-radius: 100%;
+  }
+  .social-icons a.social-square:hover i {
+    transform: scale(1.6);
+    -ms-transform: scale(1.6);
+    -webkit-transform: scale(1.6);
+    color: #fff;
+    transform: scale(1.6);
+    -webkit-text-fill-color: #62F9D5;
+  }
+
+/*  Media Query  */ 
+
+@media only screen and (max-width: 640px) {
     
     .main-intro{
         font-size: 6vw !important;
@@ -63,3 +183,22 @@ body{
         font-size: 9vw !important;
     }
   }
+
+  @media only screen and (max-width: 767px) {
+        
+    .navbar-nav {
+        background-color: #172944;
+        width: 140px;
+        margin-top: 15px;
+        margin-right: 5px;
+        position: absolute;
+        right: 10px;
+        transition-duration: 0 !important;
+        transition-delay: 0 !important;
+  }
+  .navbar{
+        transition-duration: 0 !important;
+        transition-delay: 0 !important;
+    }
+  }
+
