@@ -1,0 +1,37 @@
+/* file import */
+@import 'variables';
+@import 'mixins';
+
+body {
+    font-family: $fonts; /* variable usage */
+    background-color: $primary-color;
+    padding: $spacing;
+    min-height: 100vh;
+    
+}
+
+.btn-1{
+    @include btn($dark-grey, 5px)
+}
+.btn-2{
+    @include btn(#546257, 10px)
+}
+.btn-3{
+    @include btn(#911274, 15px)
+}
+
+@for $i from 1 through 6{
+    h#{$i}{
+        font-size: #{$i*$i}px;
+        margin-bottom: #{$i*$i}px;
+    }
+}
+
+.grid{
+    @include grid(5, 200px, 5px)
+}
+.grid > div{
+    background-color: $dark-grey;
+}
+
+

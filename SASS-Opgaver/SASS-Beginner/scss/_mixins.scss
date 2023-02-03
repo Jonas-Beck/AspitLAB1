@@ -1,0 +1,14 @@
+
+@mixin btn($bg-color, $padding){
+    background-color: $bg-color;
+    color: white;
+    padding: $padding;
+    border-radius: 15px;
+}
+
+@mixin grid($count, $width, $gap){
+    display: grid;
+    grid-template-columns: repeat($count, $width);
+    gap: $gap;
+    
+}
