@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=Ubuntu&display=swap");
+:root {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: "PT Sans Narrow", sans-serif;
+  background-color: hsl(20deg, 43%, 82%);
+  padding: 1rem;
+}
+
+h1 {
+  font-family: "Ubuntu", sans-serif;
+  color: hsl(220deg, 43%, 30%);
+  padding-bottom: 2rem;
+}
+
+.imagegrid .item {
+  float: left;
+}
+.imagegrid .item:nth-child(n) {
+  margin-bottom: 1%;
+  margin-right: 1%;
+  width: 24.75%;
+}
+.imagegrid .item:nth-last-child {
+  margin-bottom: 0px;
+  margin-right: 0px;
+}
+.imagegrid .item img {
+  border-radius: 15px;
+  width: 100%;
+}
+
+/* DESKTOP MEDIA QUERY */
+@media only screen and (min-width: 600px) {
+  .imagegrid .item:nth-child(n) {
+    margin-bottom: 2%;
+    margin-right: 2%;
+    width: 12.25%;
+  }
+  .imagegrid .item:nth-last-child {
+    margin-bottom: 0px;
+    margin-right: 0px;
+  }
+}/*# sourceMappingURL=style.css.map */
