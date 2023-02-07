@@ -1,0 +1,115 @@
+// Definition af grundfarven, som alle andre udregnes ud fra
+$blue: hsl(202, 74%, 64%);
+// $blue: hsl(340, 74%, 64%);
+// Angiv det antal kasser, der skal vises
+$total: 9;
+
+// Definition af box - her sættes boxens bredde, højde og baggrundsfarve
+// Højden udregnes forskelligt afhængigt af skærmens størrelse. Vi kan ikke bruge samme bredde og højde på boxen og så forvente, at den bliver kvadratisk, fordi den bredde, som udregnes, bliver udregnet i procent. 33% af en skærms bredde er ikke det samme præcise mål i pixels, som 33% af skærmens højde (med mindre skærmen er kvadratisk). Derfor bruges 1.77 som udregningsfaktor, fordi det er forholdet på en normal FullHD desktop skærm (1920 x 1080)
+@mixin box($size, $color, $screen)
+{
+    width: $size;
+    background-color: $color;
+    @if $screen == big
+    {
+        height: $size * 1.77;
+    }
+    @else if $screen == medium
+    {
+        height: $size;
+    }
+    @else
+    {
+        height: $size / 1.77;
+    }
+}
+
+// Funktionen, som vi også brugte i opgave 4 til at sætte margen til højre og i bunden på vores imagegrid. Dette gøres på alle boxe bortset fra den sidste kolonne i hver række. Derfor skal vi også have overført antal kolonner til mixin'en for at kunne sætte en anderledes margen på det sidste element i rækken.
+@mixin imagegrid($columns, $margin)
+{    
+    &:nth-child(n)
+    {
+        margin-right: $margin;
+        margin-bottom: $margin;
+    }
+    &:nth-child(#{$columns}n)
+    {
+        margin-right: 0;
+    }
+}
+
+// Funktionen fancyColor udregner og returnerer en 5% mørkere udgave af vores grundfarve
+@function fancyColor($darkenpercentage)
+{
+    @return darken($blue, $darkenpercentage);
+}
+
+// Funktionen calculateWidth udregner og returnerer hvor bred hver box skal være afhængigt af antal kolonner og margin (samme funktion som i opgave 4)
+@function calculateWidth($columns, $margin)
+{
+    @return ((100% - (($columns - 1) * $margin)) / $columns);
+}
+
+// For-løkken gennemløbes det antal gange, som man har bedt om øverst i koden
+@for $i from 1 through $total
+{
+    // Først oprettes den klasse, der skal bruges til at definere hver enkelt boxs højde, bredde og baggrundsfarve
+    // Her bruges tælleren til at lave klasse-navnet, og der skal bruges interpolation for at få værdien af variablen i stedet for variablens navn, fordi der skrives kode helt op til variablen. Uden interpolation ville der blive oprettet en klasse, der hed .kasse-$i
+    .kasse-#{$i}
+    {
+        // Alle klasser sættes til at floate til venstre
+        float: left;
+        // Vi bruger funktionen calculateWidth til at udregne bredden på vores kasse, som vi skal bruge i mixin'en box. Funktionen returnerer bredden på boxen, og dette lægges i variablen $tempwidth
+        $tempwidth: calculateWidth(3, 3%);
+
+        // For at være på den sikre side, sættes klasser, der er større end den total, man har bedt om, til ikke at blive vist. Vi skulle ikke gerne nogensinde ryge ind i denne if-sætning, fordi for-løkken kun kører til total-værdien, men som ekstra sikkerhed
+        @if $i > $total
+        {
+            display: none;
+        }
+        // Så længe $i er mindre end det totale antal kasser, vi har bedt om at få vist, udføres 'else'
+        @else
+        {
+            // Vi kalder mixin'en box og overfører den bredde, vi udregnede med funktionen calculateWidth i linje 64 og lagde over i variablen $tempwidth
+            // Næste argument er vores funktion fancyColor, som skal gøre baggrundsfarven 5% mørkere hver gang, vi kører rundt i løkken. Vi bruger vores tæller til at gøre farven mørkere, så første gang løkken køres igennem overføres 1*5%, anden gang løkken køres igennem, overføres 2*5% osv (se funktionen for at se, hvilke argumenter den tager imod).
+            // Til sidst overføres størrelsen på skærmen. Dette bruges i box-mixin'en til at gennemløbe if/else strukturen og finde ud af, hvordan bredden skal udregnes. Vi overfører selvfølgelig først størrelsen small (mobil), fordi vi designer mobile first.
+            @include box($tempwidth, fancyColor($i*5), small);
+            // Vi kalder vores imagegrid-mixin med 3 kolonner og 3% i margen til mobiltelefoner (fordi vi selvfølgelig designer mobile first). Imagegrid mixin'en sætter margin på højre side og i bunden - bortset fra på sidste kolonne, hvor den ikke sætter nogen margin.
+            @include imagegrid(3, 3%);
+
+            // De samme kald som ovenfor gøres nu på skærme, der er større end 600px i bredden
+            @media only screen and (min-width: 600px)
+            {
+                @include box(calculateWidth(4, 2%), fancyColor($i*5), medium);
+                @include imagegrid(4, 2%);
+            }
+
+            // De samme kald som ovenfor gøres nu på skærme, der er større end 1000px i bredden
+            @media only screen and (min-width: 1000px)
+            {
+                @include box(calculateWidth(5, 2%), fancyColor($i*5), big);
+                @include imagegrid(5, 2%);
+            }
+        }
+    }
+}
+
+// For at kunne give vores boxe en højde i procent er det overliggende element nødt til at have en fast højde. Ellers tilpasser sider sig jo altid kun til indholdet i højden, og da indholdet er afhængigt (procentvis) af det overliggende elements højde, så vil vores kasser få højden 0 med mindre vi giver det overliggende element en højde. Den får her højden 100vh (viewport height). 
+.kasser
+{
+    height: 100vh;
+    width: 100%;
+}
+
+%heading
+{
+    color: blue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1
+{
+    @extend %heading;
+    font-weight: 800;
+}
+
