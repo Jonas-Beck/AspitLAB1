@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins&family=Roboto&display=swap');
+
+/* FONTS*/
+$header-font: 'Poppins', sans-serif;
+$main-font: 'Roboto', sans-serif;
+
+/* BACKGROUND COLORS*/
+$sale-bg: #eae2d8;
+$header-topbar-bg: #fef7f6;
+
+/* COLORS*/
+$main-red: #ff5353;
+$main-banner-secondary: #565656;
+$product-title: #8d8d8d;
+$article-date-info: #8d8d8d;
+
+
+/*MIXXINS*/
+@mixin button_shopnow{
+    color: white;
+    background-color: $main-red;
+    border-radius: 0 !important;
+    width: 180px;
+    height: 40px;
+    &:hover{
+        background-color: white;
+        color: blue;
+    }
+}
+
+/* HEADER-TOPBAR STYLING*/ 
+.header-topbar{
+    background-color: $header-topbar-bg;
+    font-family: $header-font;
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    p{
+        margin-bottom: 0px;
+    }
+}
+
+
+/*HEADER-NAVBAR STYLING*/
+.header-navbar{
+
+    font-family: $header-font;
+    a{
+        text-decoration: none;
+        color: black;
+        &:hover{
+            color: $main-red;
+        }
+    }
+    i{
+        &:hover{
+            color: $main-red;
+        }
+    }
+    /*NAVBAR HOVER STYLE*/
+    .dropdown:hover>.dropdown-menu {
+        display: block;
+        border-radius: 0px;
+      }
+      .dropdown>.dropdown-toggle:active {
+        /*Without this, clicking will make it sticky*/
+          pointer-events: none;
+      }
+
+    /*NAVBAR ICON STYLING*/
+    .notification{
+        position: relative;
+    }
+    .badge {
+        position: absolute;
+        top: -15px;
+        right: -15px;
+        padding: 6px 6px;
+        border-radius: 50%;
+        min-width: 25px;
+        background: $main-red;
+        color: white;
+      }
+}
+
+/* MAIN BANNER STYLING*/
+.main-banner{
+    background-image: url(../Images/banner-bg2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    .main-banner-secondary{
+        color: $main-banner-secondary !important; 
+        font-family: $header-font;
+    }
+    .main-banner-btn{
+        @include button_shopnow()
+    }
+}
+
+/*FEATURED PRODUCT STYLING */
+.product-info{
+    .product-title{
+        color: $product-title;
+        
+    }
+    .product-rating{
+        color: $main-red;
+    }
+}
+
+/* SALE BANNER*/
+.sale-banner{
+    background-color: $sale-bg;
+    .sale-banner-price{
+        font-weight: 700;
+        font-family: "Dancing Script", cursive;
+    }
+    .sale-banner-btn{
+        @include button_shopnow()
+    }
+}
+
+/* TODO TABLET SIZE RESPONSIVE + MOBILE SIZE*/
+
+// .icon{
+//     border: 1px solid rgba($color: #000000, $alpha: 0.1);
+// }
+
+/* ARTICLE STYLING */ 
+.article{
+    width: 90%;
+    .article-date{
+        color: $article-date-info;
+        font-size: 15px;
+        padding-top: 20px;
+        margin-bottom: 0px;
+    }
+    .article-title{
+        font-weight: bold;
+        margin-bottom: 30px;
+        max-width: 90%;
+    }
+    .article-info{
+        color: $article-date-info;
+        display: flex;
+        gap: 40px;
+        font-size: 15px;
+        max-width: 90%;
+        p{
+            margin-bottom: 0px;
+        }
+        .article-info-section, .article-info-comment{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            &:hover{
+                color: $main-red;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+/*MEDIA QUERYS*/
+@media only screen and (max-width: 438px) {
+    .header-topbar{
+        p{
+            font-size: 14px;
+        }
+    }
+    .header-navbar-main{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 583px) {
+        .main-banner-img{
+            order: -1 !important;
+            
+        }
+  }

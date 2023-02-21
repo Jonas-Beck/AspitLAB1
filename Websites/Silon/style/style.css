@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins&family=Roboto&display=swap");
+/* FONTS*/
+/* BACKGROUND COLORS*/
+/* COLORS*/
+/*MIXXINS*/
+/* HEADER-TOPBAR STYLING*/
+.header-topbar {
+  background-color: #fef7f6;
+  font-family: "Poppins", sans-serif;
+}
+.header-topbar a {
+  text-decoration: none;
+  color: black;
+}
+.header-topbar p {
+  margin-bottom: 0px;
+}
+
+/*HEADER-NAVBAR STYLING*/
+.header-navbar {
+  font-family: "Poppins", sans-serif;
+  /*NAVBAR HOVER STYLE*/
+  /*NAVBAR ICON STYLING*/
+}
+.header-navbar a {
+  text-decoration: none;
+  color: black;
+}
+.header-navbar a:hover {
+  color: #ff5353;
+}
+.header-navbar i:hover {
+  color: #ff5353;
+}
+.header-navbar .dropdown:hover > .dropdown-menu {
+  display: block;
+  border-radius: 0px;
+}
+.header-navbar .dropdown > .dropdown-toggle:active {
+  /*Without this, clicking will make it sticky*/
+  pointer-events: none;
+}
+.header-navbar .notification {
+  position: relative;
+}
+.header-navbar .badge {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  padding: 6px 6px;
+  border-radius: 50%;
+  min-width: 25px;
+  background: #ff5353;
+  color: white;
+}
+
+/* MAIN BANNER STYLING*/
+.main-banner {
+  background-image: url(../Images/banner-bg2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main-banner .main-banner-secondary {
+  color: #565656 !important;
+  font-family: "Poppins", sans-serif;
+}
+.main-banner .main-banner-btn {
+  color: white;
+  background-color: #ff5353;
+  border-radius: 0 !important;
+  width: 180px;
+  height: 40px;
+}
+.main-banner .main-banner-btn:hover {
+  background-color: white;
+  color: blue;
+}
+
+/*FEATURED PRODUCT STYLING */
+.product-info .product-title {
+  color: #8d8d8d;
+}
+.product-info .product-rating {
+  color: #ff5353;
+}
+
+/* SALE BANNER*/
+.sale-banner {
+  background-color: #eae2d8;
+}
+.sale-banner .sale-banner-price {
+  font-weight: 700;
+  font-family: "Dancing Script", cursive;
+}
+.sale-banner .sale-banner-btn {
+  color: white;
+  background-color: #ff5353;
+  border-radius: 0 !important;
+  width: 180px;
+  height: 40px;
+}
+.sale-banner .sale-banner-btn:hover {
+  background-color: white;
+  color: blue;
+}
+
+/* TODO TABLET SIZE RESPONSIVE + MOBILE SIZE*/
+/* ARTICLE STYLING */
+.article {
+  width: 90%;
+}
+.article .article-date {
+  color: #8d8d8d;
+  font-size: 15px;
+  padding-top: 20px;
+  margin-bottom: 0px;
+}
+.article .article-title {
+  font-weight: bold;
+  margin-bottom: 30px;
+  max-width: 90%;
+}
+.article .article-info {
+  color: #8d8d8d;
+  display: flex;
+  gap: 40px;
+  font-size: 15px;
+  max-width: 90%;
+}
+.article .article-info p {
+  margin-bottom: 0px;
+}
+.article .article-info .article-info-section, .article .article-info .article-info-comment {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.article .article-info .article-info-section:hover, .article .article-info .article-info-comment:hover {
+  color: #ff5353;
+}
+
+/*MEDIA QUERYS*/
+@media only screen and (max-width: 438px) {
+  .header-topbar p {
+    font-size: 14px;
+  }
+  .header-navbar-main {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 583px) {
+  .main-banner-img {
+    order: -1 !important;
+  }
+}/*# sourceMappingURL=style.css.map */
