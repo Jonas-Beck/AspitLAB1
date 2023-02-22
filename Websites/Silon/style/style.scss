@@ -99,7 +99,51 @@ $article-date-info: #8d8d8d;
     }
 }
 
-/*FEATURED PRODUCT STYLING */
+/* PRODUCT STYLING GENERAL */
+.product{
+    position: relative;
+}
+
+.product-hover-icons{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 130px;
+    left: 0;
+    right: 0;
+    .hover-icon{
+        background-color: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        &:hover{
+            background-color: $main-red;
+            color: white;
+            transition: 0s;
+        }
+    }
+    .hover-icon-1{
+        transition: 0.5s;
+    }
+    .hover-icon-2{
+        transition: 0.75s;
+    }
+    .hover-icon-3{
+        transition: 1s;
+    }
+    
+}
+
+.product-image:hover > .product-hover-icons > .hover-icon{
+    transform: translateY(-40px);
+    opacity: 1;
+}
+
 .product-info{
     .product-title{
         color: $product-title;
