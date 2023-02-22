@@ -7,6 +7,7 @@ $main-font: 'Roboto', sans-serif;
 /* BACKGROUND COLORS*/
 $sale-bg: #eae2d8;
 $header-topbar-bg: #fef7f6;
+$footer-bg: #e9e2d8;
 
 /* COLORS*/
 $main-red: #ff5353;
@@ -121,20 +122,27 @@ $article-date-info: #8d8d8d;
     }
 }
 
-/* TODO TABLET SIZE RESPONSIVE + MOBILE SIZE*/
 
-// .icon{
-//     border: 1px solid rgba($color: #000000, $alpha: 0.1);
-// }
+.icon{
+    border: 1px solid rgba($color: #000000, $alpha: 0.1);
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
 
 /* ARTICLE STYLING */ 
 .article{
-    width: 90%;
+    
     .article-date{
         color: $article-date-info;
         font-size: 15px;
         padding-top: 20px;
         margin-bottom: 0px;
+        max-width: 90%;
     }
     .article-title{
         font-weight: bold;
@@ -144,9 +152,8 @@ $article-date-info: #8d8d8d;
     .article-info{
         color: $article-date-info;
         display: flex;
-        gap: 40px;
         font-size: 15px;
-        max-width: 90%;
+        justify-content: space-between;
         p{
             margin-bottom: 0px;
         }
@@ -161,12 +168,97 @@ $article-date-info: #8d8d8d;
     }
 }
 
+/*FOOTER STYLING*/
+.footer{
+    font-family: $header-font;
+    background-color: $footer-bg;
+    p{
+        margin-bottom: 0px;
+    }
+    a{
+        text-decoration: none;
+        color: $article-date-info;
+        &:hover{
+            color: $main-red;
+        }
+    }
+    .mobile-app-btn{
+        .google-play{
+            background-color: white;
+            color: black;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            width: 150px;
+            gap: 15px;
+            padding: 5px;
+            /*HOVER EFFECT FOR GOGGLE PLAY*/
+            &:hover{
+                background-color: $main-red;
+                color: white;
+                transition: 1s;
+                .ti-android{
+                    color: white;
+                    transition: 1s;
+                }
+            }
+            /*STYLE ICON*/
+            .ti-android{
+                align-self: center;
+                font-size: 25px;
+                color: $main-red;
+            }
+            /*STLYE FIRST P ELEMENT*/
+            .google-play-text > p:first-child{
+                font-size: 10px;
+                margin-bottom: -5px;
+            }
 
+        }
+        .apple-store{
+            background-color: $main-red;
+            color: white;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            width: 150px;
+            gap: 15px;
+            padding: 5px;
+             /*STYLE ICON*/
+            .ti-apple{
+                align-self: center;
+                font-size: 25px;
+            }
+              /*STLYE FIRST P ELEMENT*/
+            .apple-store-text > p:first-child{
+                font-size: 10px;
+                margin-bottom: -5px;
+            }
+        }
+    }
 
+    .social-icons-navbar{
+        .social-icon{
+            padding: 5px 8px 3px 8px;
+            background-color: white;
+            /*HOVER EFFECT FOR SOCIALS*/
+            &:hover{
+                background-color: $main-red;
+                transition: 0.5s;
+                .ti-icon{
+                    color: white;
+                    transition: 0.5s;
 
+                }
+            }
+        }
+    }
+}
 
 
 /*MEDIA QUERYS*/
+
+/* HEADER MEDIA QUERYS*/
 @media only screen and (max-width: 438px) {
     .header-topbar{
         p{
@@ -177,10 +269,21 @@ $article-date-info: #8d8d8d;
         font-size: 12px;
     }
 }
-
+/* MAIN BANNER MEDIA QUERY*/
 @media only screen and (max-width: 583px) {
         .main-banner-img{
             order: -1 !important;
-            
         }
   }
+  
+  /* MOBILE APP BUTTONS MEDIA QUERYS*/
+  @media only screen and (max-width: 992px) {
+    .mobile-app-btn{
+        flex-direction: row !important;
+    }
+}
+@media only screen and (max-width: 771px) {
+    .mobile-app-btn{
+        flex-direction: column !important;
+    }
+}

@@ -104,16 +104,22 @@
   color: blue;
 }
 
-/* TODO TABLET SIZE RESPONSIVE + MOBILE SIZE*/
-/* ARTICLE STYLING */
-.article {
-  width: 90%;
+.icon {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
+
+/* ARTICLE STYLING */
 .article .article-date {
   color: #8d8d8d;
   font-size: 15px;
   padding-top: 20px;
   margin-bottom: 0px;
+  max-width: 90%;
 }
 .article .article-title {
   font-weight: bold;
@@ -123,9 +129,8 @@
 .article .article-info {
   color: #8d8d8d;
   display: flex;
-  gap: 40px;
   font-size: 15px;
-  max-width: 90%;
+  justify-content: space-between;
 }
 .article .article-info p {
   margin-bottom: 0px;
@@ -139,7 +144,88 @@
   color: #ff5353;
 }
 
+/*FOOTER STYLING*/
+.footer {
+  font-family: "Poppins", sans-serif;
+  background-color: #e9e2d8;
+}
+.footer p {
+  margin-bottom: 0px;
+}
+.footer a {
+  text-decoration: none;
+  color: #8d8d8d;
+}
+.footer a:hover {
+  color: #ff5353;
+}
+.footer .mobile-app-btn .google-play {
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  width: 150px;
+  gap: 15px;
+  padding: 5px;
+  /*HOVER EFFECT FOR GOGGLE PLAY*/
+  /*STYLE ICON*/
+  /*STLYE FIRST P ELEMENT*/
+}
+.footer .mobile-app-btn .google-play:hover {
+  background-color: #ff5353;
+  color: white;
+  transition: 1s;
+}
+.footer .mobile-app-btn .google-play:hover .ti-android {
+  color: white;
+  transition: 1s;
+}
+.footer .mobile-app-btn .google-play .ti-android {
+  align-self: center;
+  font-size: 25px;
+  color: #ff5353;
+}
+.footer .mobile-app-btn .google-play .google-play-text > p:first-child {
+  font-size: 10px;
+  margin-bottom: -5px;
+}
+.footer .mobile-app-btn .apple-store {
+  background-color: #ff5353;
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  width: 150px;
+  gap: 15px;
+  padding: 5px;
+  /*STYLE ICON*/
+  /*STLYE FIRST P ELEMENT*/
+}
+.footer .mobile-app-btn .apple-store .ti-apple {
+  align-self: center;
+  font-size: 25px;
+}
+.footer .mobile-app-btn .apple-store .apple-store-text > p:first-child {
+  font-size: 10px;
+  margin-bottom: -5px;
+}
+.footer .social-icons-navbar .social-icon {
+  padding: 5px 8px 3px 8px;
+  background-color: white;
+  /*HOVER EFFECT FOR SOCIALS*/
+}
+.footer .social-icons-navbar .social-icon:hover {
+  background-color: #ff5353;
+  transition: 0.5s;
+}
+.footer .social-icons-navbar .social-icon:hover .ti-icon {
+  color: white;
+  transition: 0.5s;
+}
+
 /*MEDIA QUERYS*/
+/* HEADER MEDIA QUERYS*/
 @media only screen and (max-width: 438px) {
   .header-topbar p {
     font-size: 14px;
@@ -148,8 +234,20 @@
     font-size: 12px;
   }
 }
+/* MAIN BANNER MEDIA QUERY*/
 @media only screen and (max-width: 583px) {
   .main-banner-img {
     order: -1 !important;
+  }
+}
+/* MOBILE APP BUTTONS MEDIA QUERYS*/
+@media only screen and (max-width: 992px) {
+  .mobile-app-btn {
+    flex-direction: row !important;
+  }
+}
+@media only screen and (max-width: 771px) {
+  .mobile-app-btn {
+    flex-direction: column !important;
   }
 }/*# sourceMappingURL=style.css.map */
