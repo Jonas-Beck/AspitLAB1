@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+
+*{
+    font-family: "Inter", sans-serif;
+}
+
+
+
+/* VARIABLES */
+
+/*BACKGROUND COLORS*/
+$navbar-burger-bg: #e9e8ed;
+$main-bg: #f5f8ff;
+$content-bg: #fcfcfc;
+$footer-bg: #f5f8ff;
+$footer-bottom-bg: #434ce7;
+
+/* COLORS*/
+$main-blue: #434ce7;
+$main-light-blue: #dfeafe;
+
+
+@mixin sectiontitle(){
+    color: $main-blue;
+    display: flex;
+    gap: 15px;
+    hr{
+        width: 20px;
+        border: 1px solid $main-blue;
+        opacity: 1;
+        align-self: center;
+    }
+    h6{
+        margin: 0px !important;
+        align-self: center;
+    }
+}
+
+@mixin button-blue(){
+    background-color: $main-blue;
+    color: white;
+    padding: 10px 20px 10px 20px;
+    border: none;
+    border-radius: 5px;
+    &:hover{
+        background-color: darken($color: $main-blue, $amount: 5%);
+    }
+}
+
+@mixin button-light-blue(){
+    background-color: $main-light-blue;
+    color: black;
+    padding: 5px 10px 5px 10px;
+    max-width: 150px;
+    border: none;
+    border-radius: 5px;
+    &:hover{
+        background-color: darken($color: $main-blue, $amount: 5%);
+        color: white;
+    }
+}
+
+
+
+/* NAVBAR STYLING*/
+// .navbar{
+//     a{
+//         text-decoration: none;
+//         color: black;
+//     }
+//     .dropdown-menu{
+//         border: none;
+//         border-top: 3px solid $main-blue;
+//         .dropdown-item{
+//             border-bottom: 1px solid rgba($color: black, $alpha: 0.1);
+//         }
+//     }
+//     .navbar-toggler{
+//         border: none;
+//         background-color: $navbar-burger-bg;
+        
+//     }
+
+// }
+
+/*Remove outline on burger menu click*/
+// .navbar-toggler:focus,
+// .navbar-toggler:active,
+// .navbar-toggler-icon:focus {
+//     outline: none;
+//     box-shadow: none;
+// }
+
+/* ABOUT US SECTION STYLING*/
+.about-us-section{
+    background-color: $content-bg;
+
+    .about-us-left{
+        display: flex;
+
+        .about-us-left-play{
+            position: absolute;
+            bottom: 40%;
+            left: -10%;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: $main-blue;
+            border: 2px solid white;
+            text-align: center;
+            i{
+                color: white;
+                padding-top: 22px;
+            }
+            /* TODO HOVER EFFEKT*/
+        }
+        img{
+            border-radius: 20px;
+            max-width: 100%;
+        }
+    }
+
+
+    .about-us-right-subtitle{
+        @include sectiontitle()
+    }
+    .about-us-right-image{
+        max-width: 25px;
+    }
+    .about-us-right-text{
+        font-size: 15px;
+    }
+    .about-us-right-btn{
+        @include button-blue()
+    }
+}
+
+/*CITIES STYLING*/
+.cities-subtitle{
+    @include sectiontitle()
+}
+
+.cities-img-hover{
+    overflow: hidden;
+    padding-bottom: 100%;
+    .cities-img{
+        transition: transform .5s ease;
+        filter: brightness(50%);
+        object-fit: cover;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+    &:hover .cities-img{
+        transform: scale(1.2);
+    }
+    .cities-text{
+        left: 30px;
+        bottom: 10px;
+    }
+}
+
+
+/*CONTACT US TODAY*/
+.contact-section{
+    background-color: $content-bg;
+    .contact-right-subtitle{
+        @include sectiontitle()
+    }
+    .contact-right-btn{
+        @include button-blue()
+    }
+    .contact-right-image{
+        max-width: 25px;
+    }
+    .contact-right-text{
+        font-size: 15px;
+    }
+}
+
+
+/* TESTMONIAL*/
+.testmonial-section-subtitle{
+    @include sectiontitle()
+}
+.testmonial-title{
+    max-width: 451px;
+}
+.slider-button{
+    background-color: white;
+    border: none;
+}
+.card{
+    border-color: rgba($color: black, $alpha: 0.1);
+}
+/* https://www.codeply.com/p/0CWffz76Q9  SLIDER STYLING USING CODEPLY EXAMPLE*/ 
+@media (max-width: 767px) {
+    .carousel-inner .carousel-item > div {
+        display: none;
+    }
+    .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+/*MD BREAKPOINT 2 COLS*/
+@media (min-width: 768px) {
+    
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+      transform: translateX(50%); /*100 / 2 = 50% */
+    }
+    
+    .carousel-inner .carousel-item-start.active, 
+    .carousel-inner .carousel-item-prev {
+      transform: translateX(-50%); /*100 / 2 = 50% */
+    }
+
+    .carousel-inner .carousel-item-end,
+    .carousel-inner .carousel-item-start { 
+    transform: translateX(0);
+    }
+
+}
+
+/*LG BREAKPOINT 3 COLS*/
+@media (min-width: 992px) {
+    
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+      transform: translateX(33%); /*100 / 3 = 33,33% */
+    }
+    
+    .carousel-inner .carousel-item-start.active, 
+    .carousel-inner .carousel-item-prev {
+      transform: translateX(-33%); /*100 / 3 = 33,33% */
+    }
+
+    .carousel-inner .carousel-item-end,
+    .carousel-inner .carousel-item-start { 
+    transform: translateX(0);
+    }
+
+}
+
+/* FAQ STYLING*/
+.faq-section{
+    background-color: $content-bg;
+    .faq-section-subtitle{
+        @include sectiontitle()
+    }
+}
+
+/*BLOG STYLING*/
+.blog-section{
+    
+    .blog-section-subtitle{
+        @include sectiontitle();
+    }
+    
+    .blog-button{
+        @include button-light-blue()       
+    }
+    .blog-img-hover{
+        overflow: hidden;
+        .blog-img{
+            transition: transform .5s ease;
+        }
+        &:hover .blog-img{
+            transform: scale(1.2);
+        }
+    }
+    .blog-text{
+        height: 40px /*Responsive ?*/
+    }
+}
+
+/*FOOTER MAIN STYLING*/
+.footer-main{
+    background-color: $footer-bg;
+    a:hover{
+        transition: 0.5s;
+        transform: translateX(5px);
+        color: $main-blue !important;
+    }
+}
+/*FOOTER BOTTOM STYLING*/
+.footer-bottom{
+    background-color: $footer-bottom-bg;
+    color: white;
+}
+/*MEDIA QUERY*/
+@media only screen and (max-width: 1200px) {
+    .about-us-left-play{
+        left: -14% !important;
+        
+    }
+    
+  }
