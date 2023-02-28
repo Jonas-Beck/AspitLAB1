@@ -236,6 +236,35 @@
   align-self: center;
 }
 
+.accordion-button:not(.collapsed) {
+  background-color: #434ce7 !important;
+  transition: 0.5s;
+  box-shadow: none;
+  color: white;
+}
+.accordion-button:not(.collapsed)::after {
+  background-image: url(../gfx/minus-solid.svg);
+}
+.accordion-button:focus {
+  box-shadow: none;
+}
+.accordion-button::after {
+  background-image: url(../gfx/plus-solid.svg);
+}
+
+.custom-accordion .accordion-item {
+  background-color: white;
+  margin-bottom: 10px;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.accordion-item {
+  border: 0.73px solid rgba(128, 128, 128, 0.2) !important;
+  border-top: 0.73px solid rgba(128, 128, 128, 0.2) !important;
+}
+
 /*BLOG STYLING*/
 .blog-section .blog-section-subtitle {
   color: #434ce7;
@@ -269,6 +298,7 @@
 }
 .blog-section .blog-img-hover .blog-img {
   transition: transform 0.5s ease;
+  width: 100%;
 }
 .blog-section .blog-img-hover:hover .blog-img {
   transform: scale(1.2);
