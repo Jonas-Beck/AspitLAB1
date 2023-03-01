@@ -92,6 +92,53 @@ $main-light-blue: #dfeafe;
 // }
 
 
+/* POPULAR SECTION*/
+.popular-section-subtitle{
+    @include sectiontitle()
+}
+
+/* House Card Styling*/
+.house-card{
+    .card-img-hover{   
+        overflow: hidden;
+        .card-img{
+            transition: transform .5s ease;
+            width: 100%;
+        }
+        &:hover .card-img{
+            transform: scale(1.2);
+        }
+    }
+    .house-card-img-button{
+        left: 20px;
+        top: 15px;
+        background-color: $main-blue;
+        color: white;
+        padding: 5px 10px 5px 10px;
+        border: none;
+        border-radius: 10px;
+        &:hover{
+            background-color: darken($color: $main-blue, $amount: 5%);
+        }
+    }
+    
+    .house-card-rent-button{
+        color: $main-blue;
+        background-color: $main-light-blue;
+        border-radius: 5px;
+        padding: 2px 5px 2px 5px;
+        font-size: small;
+    }
+    .house-card-text{
+        font-size: 12px; // Media Querys ?? TODO Check Later
+        
+    }
+    
+}   
+.card-footer{
+    // background-color: white; ????
+}
+
 
 /* ABOUT US SECTION STYLING*/
 .about-us-section{
@@ -195,6 +242,7 @@ $main-light-blue: #dfeafe;
 .card{
     border-color: rgba($color: black, $alpha: 0.1);
 }
+
 /* https://www.codeply.com/p/0CWffz76Q9  SLIDER STYLING USING CODEPLY EXAMPLE*/ 
 @media (max-width: 767px) {
     .carousel-inner .carousel-item > div {
@@ -314,7 +362,7 @@ $main-light-blue: #dfeafe;
         }
     }
     .blog-text{
-        height: 40px /*Responsive ?*/
+        height: 40px /*Responsive ? TODO*/
     }
 }
 

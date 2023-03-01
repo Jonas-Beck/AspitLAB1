@@ -8,6 +8,57 @@
 /* COLORS*/
 /* NAVBAR STYLING*/
 /*Remove outline on burger menu click*/
+/* POPULAR SECTION*/
+.popular-section-subtitle {
+  color: #434ce7;
+  display: flex;
+  gap: 15px;
+}
+.popular-section-subtitle hr {
+  width: 20px;
+  border: 1px solid #434ce7;
+  opacity: 1;
+  align-self: center;
+}
+.popular-section-subtitle h6 {
+  margin: 0px !important;
+  align-self: center;
+}
+
+/* House Card Styling*/
+.house-card .card-img-hover {
+  overflow: hidden;
+}
+.house-card .card-img-hover .card-img {
+  transition: transform 0.5s ease;
+  width: 100%;
+}
+.house-card .card-img-hover:hover .card-img {
+  transform: scale(1.2);
+}
+.house-card .house-card-img-button {
+  left: 20px;
+  top: 15px;
+  background-color: #434ce7;
+  color: white;
+  padding: 5px 10px 5px 10px;
+  border: none;
+  border-radius: 10px;
+}
+.house-card .house-card-img-button:hover {
+  background-color: #2c36e4;
+}
+.house-card .house-card-rent-button {
+  color: #434ce7;
+  background-color: #dfeafe;
+  border-radius: 5px;
+  padding: 2px 5px 2px 5px;
+  font-size: small;
+}
+.house-card .house-card-text {
+  font-size: 12px;
+}
+
 /* ABOUT US SECTION STYLING*/
 .about-us-section {
   background-color: #fcfcfc;

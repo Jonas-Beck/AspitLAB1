@@ -6,13 +6,13 @@
 
 body {
   font-family: "PT Sans Narrow", sans-serif;
-  background-color: hsl(20deg, 43%, 82%);
+  background-color: hsl(20, 43%, 82%);
   padding: 1rem;
 }
 
 h1 {
   font-family: "Ubuntu", sans-serif;
-  color: hsl(220deg, 43%, 30%);
+  color: hsl(220, 43%, 30%);
   padding-bottom: 2rem;
 }
 
