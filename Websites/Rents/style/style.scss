@@ -65,41 +65,110 @@ $main-light-blue: #dfeafe;
 
 
 /* NAVBAR STYLING*/
-// .navbar{
-//     a{
-//         text-decoration: none;
-//         color: black;
-//     }
-//     .dropdown-menu{
-//         border: none;
-//         border-top: 3px solid $main-blue;
-//         .dropdown-item{
-//             border-bottom: 1px solid rgba($color: black, $alpha: 0.1);
-//         }
-//     }
-//     .navbar-toggler{
-//         border: none;
-//         background-color: $navbar-burger-bg;
-        
-//     }
+.navbar{
+    background-color: white;
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    .dropdown-menu{
+        border: none;
+    }
+    .dropdown-toggle::after{
+        display: none !important;
+    }
+    .nav-link:hover, .dropdown-item:hover {
+        color: $main-blue;
+    }
+    .dropdown-item:active{
+        background-color: $main-blue;
+        color: white;
+    }
+    .nav-link-home{
+        color: $main-blue !important;
+    }
+    
+    .navbar-login-btn{
+        background-color: white;
+        color: black;
+        transition: 0.5s !important;
+        padding: 10px 20px 10px 20px;
+        border: none;
+        border-radius: 5px;
+        &:hover{
+            background-color: $main-blue;
+            color: white;
+        }
 
-// }
+    }
+    .navbar-signup-btn{
+        @include button-blue()
+    }
+    .navbar-toggler{
+        border: none;
+        background-color: $navbar-burger-bg;
+    }
+}
+
+// Slide in animation for dropdown hover  (https://stackoverflow.com/questions/71879785/dropdown-menu-transition-bootstrap-5)
+@media (min-width: 200px) {
+    .animate {
+      animation-duration: 0.3s;
+      animation-fill-mode: both;
+    }
+  }
+  @keyframes slidein {
+    0% {
+      transform: translateY(1rem);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0rem);
+      opacity: 1;
+    }
+    0% {
+      transform: translateY(1rem);
+      opacity: 0;
+    }
+  }
+  .slidein {
+    animation-name: slidein;
+  }
+  
+
+// Styling for dropdown menu on deskstop ( >= LG)
+@media only screen and (min-width: 992px) {
+    .navbar{
+        .dropdown-menu{
+            border: none;
+            width: 200px;
+            border-top: 3px solid $main-blue;
+            .dropdown-item{
+                border-bottom: 1px solid rgba($color: black, $alpha: 0.1); 
+            }   
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+    }
+  }
+
 
 /*Remove outline on burger menu click*/
-// .navbar-toggler:focus,
-// .navbar-toggler:active,
-// .navbar-toggler-icon:focus {
-//     outline: none;
-//     box-shadow: none;
-// }
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
 
 
 /* MAIN CONTENT STYLE*/
-
 .main-content{
     background-color: $main-bg;
 }
-
 
 // Fixed height so it dosent overlap with House Search 
 .fixed-height{
@@ -188,7 +257,6 @@ $main-light-blue: #dfeafe;
 }
 
 
-
 /* POPULAR HOUSES SECTION*/
 .popular-section-subtitle{
     @include sectiontitle()
@@ -229,7 +297,7 @@ $main-light-blue: #dfeafe;
         font-size: small;
     }
     .house-card-text{
-        font-size: 12px; // Media Querys ?? TODO Check Later
+        font-size: 12px; 
     }
     .card-footer{
         background-color: rgba($color: black, $alpha: 0.0); 
@@ -237,15 +305,16 @@ $main-light-blue: #dfeafe;
     
 }   
 
-
-
 /* ABOUT US SECTION STYLING*/
 .about-us-section{
     background-color: $content-bg;
-
+    
     .about-us-left{
         display: flex;
-
+        &:hover .about-us-left-play{
+            animation: pulse 2s infinite;
+    
+        }
         .about-us-left-play{
             position: absolute;
             bottom: 40%;
@@ -256,18 +325,17 @@ $main-light-blue: #dfeafe;
             background-color: $main-blue;
             border: 2px solid white;
             text-align: center;
+            cursor: pointer;
             i{
                 color: white;
                 padding-top: 22px;
             }
-            /* TODO HOVER EFFEKT*/
         }
         img{
             border-radius: 20px;
             max-width: 100%;
         }
     }
-
 
     .about-us-right-subtitle{
         @include sectiontitle()
@@ -282,6 +350,40 @@ $main-light-blue: #dfeafe;
         @include button-blue()
     }
 }
+
+// Keyframes Pulse Animation https://codepen.io/olam/pen/KKMvWM
+@keyframes pulse {
+    0% {
+      -moz-box-shadow: 0 0 0 0 rgba(255,255,255, 1);
+      box-shadow: 0 0 0 0 rgba(255,255,255, 1);
+    }
+    70% {
+        -moz-box-shadow: 0 0 0 10px rgba(255,255,255, 0);
+        box-shadow: 0 0 0 10px rgba(255,255,255, 0);
+    }
+    100% {
+        -moz-box-shadow: 0 0 0 0 rgba(255,255,255, 0);
+        box-shadow: 0 0 0 0 rgba(255,255,255, 0);
+    }
+  }
+
+
+/* ABOUT US PLAY BUTTON MEDIA QUERY*/
+@media only screen and (max-width: 520px) {
+    .about-us-left-play{
+        left: -14% !important;
+        scale: 0.9;
+        
+    }
+  }
+
+@media only screen and (max-width: 400px) {
+    .about-us-left-play{
+        left: -18% !important;
+        scale: 0.9
+    }
+  }
+
 
 /*CITIES STYLING*/
 .cities-subtitle{
@@ -479,11 +581,6 @@ $main-light-blue: #dfeafe;
     background-color: $footer-bottom-bg;
     color: white;
 }
-/*MEDIA QUERY*/
-@media only screen and (max-width: 1200px) {
-    .about-us-left-play{
-        left: -14% !important;
-        
-    }
-    
-  }
+
+
+

@@ -7,7 +7,101 @@
 /*BACKGROUND COLORS*/
 /* COLORS*/
 /* NAVBAR STYLING*/
+.navbar {
+  background-color: white;
+}
+.navbar a {
+  text-decoration: none;
+  color: black;
+}
+.navbar .dropdown-menu {
+  border: none;
+}
+.navbar .dropdown-toggle::after {
+  display: none !important;
+}
+.navbar .nav-link:hover, .navbar .dropdown-item:hover {
+  color: #434ce7;
+}
+.navbar .dropdown-item:active {
+  background-color: #434ce7;
+  color: white;
+}
+.navbar .nav-link-home {
+  color: #434ce7 !important;
+}
+.navbar .navbar-login-btn {
+  background-color: white;
+  color: black;
+  transition: 0.5s !important;
+  padding: 10px 20px 10px 20px;
+  border: none;
+  border-radius: 5px;
+}
+.navbar .navbar-login-btn:hover {
+  background-color: #434ce7;
+  color: white;
+}
+.navbar .navbar-signup-btn {
+  background-color: #434ce7;
+  color: white;
+  padding: 10px 20px 10px 20px;
+  border: none;
+  border-radius: 5px;
+}
+.navbar .navbar-signup-btn:hover {
+  background-color: #2c36e4;
+}
+.navbar .navbar-toggler {
+  border: none;
+  background-color: #e9e8ed;
+}
+
+@media (min-width: 200px) {
+  .animate {
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+  }
+}
+@keyframes slidein {
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+}
+.slidein {
+  animation-name: slidein;
+}
+
+@media only screen and (min-width: 992px) {
+  .navbar .dropdown-menu {
+    border: none;
+    width: 200px;
+    border-top: 3px solid #434ce7;
+  }
+  .navbar .dropdown-menu .dropdown-item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+}
 /*Remove outline on burger menu click*/
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 /* MAIN CONTENT STYLE*/
 .main-content {
   background-color: #f5f8ff;
@@ -155,6 +249,9 @@
 .about-us-section .about-us-left {
   display: flex;
 }
+.about-us-section .about-us-left:hover .about-us-left-play {
+  animation: pulse 2s infinite;
+}
 .about-us-section .about-us-left .about-us-left-play {
   position: absolute;
   bottom: 40%;
@@ -165,7 +262,7 @@
   background-color: #434ce7;
   border: 2px solid white;
   text-align: center;
-  /* TODO HOVER EFFEKT*/
+  cursor: pointer;
 }
 .about-us-section .about-us-left .about-us-left-play i {
   color: white;
@@ -207,6 +304,30 @@
   background-color: #2c36e4;
 }
 
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgb(255, 255, 255);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+/* ABOUT US PLAY BUTTON MEDIA QUERY*/
+@media only screen and (max-width: 520px) {
+  .about-us-left-play {
+    left: -14% !important;
+    scale: 0.9;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .about-us-left-play {
+    left: -18% !important;
+    scale: 0.9;
+  }
+}
 /*CITIES STYLING*/
 .cities-subtitle {
   color: #434ce7;
@@ -461,11 +582,4 @@
 .footer-bottom {
   background-color: #434ce7;
   color: white;
-}
-
-/*MEDIA QUERY*/
-@media only screen and (max-width: 1200px) {
-  .about-us-left-play {
-    left: -14% !important;
-  }
 }/*# sourceMappingURL=style.css.map */

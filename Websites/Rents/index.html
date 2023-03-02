@@ -14,11 +14,80 @@
 </head>
 <body>
     <!-- NAVBAR -->
-    
+    <nav class="navbar sticky-top navbar-expand-lg  ">
+        <div class="container">
+            <!-- Navbar Brand Logo-->
+          <a class="navbar-brand" href="#">
+            <img src="./gfx/logo.png" alt="RentsLogo">
+          </a>
+          
+          
+          <div class="d-flex gap-3 order-lg-last ">
+            <button class="navbar-login-btn ">Login</button>
+            <button class="navbar-signup-btn ">Sign up</button>
+            <!-- Navbar burger button-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
 
-
-
-
+          <!-- Navbar Collapse Content-->
+          <div class="collapse navbar-collapse flex-grow-0" id="navbarToggler">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                <!-- Home-->
+              <li class="nav-item">
+                <a class="nav-link active nav-link-home" aria-current="page" href="#">Home</a>
+              </li>
+              <!-- Listing Dropdown Item-->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="d-flex align-items-center gap-2">
+                        <!-- Dropdown name-->
+                        <p class="m-0">Listing</p>
+                        <!-- Arrow down icon-->
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                </a>
+                <!-- Dropdown Listing Content -->
+                <ul class="dropdown-menu p-0 animate slidein" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item p-2 ps-4" href="#">Dropdown-01</a></li>
+                  <li><a class="dropdown-item p-2 ps-4" href="#">Dropdown-02</a></li>
+                  <li><a class="dropdown-item p-2 ps-4" href="#">Dropdown-03</a></li>
+                </ul>
+              </li>
+              <!-- Agents Dropdown Item-->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="d-flex align-items-center gap-2">
+                        <!-- Dropdown Name-->
+                        <p class="m-0">Agents</p>
+                        <!-- Arrow down icon-->
+                        <i class="fa-solid fa-angle-down"></i> 
+                    </div>
+                </a>
+                <!-- Dropdown Agents Content-->
+                <ul class="dropdown-menu p-0 animate slidein" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item p-2 ps-4" href="#">Dropdown-01</a></li>
+                  <li><a class="dropdown-item p-2 ps-4" href="#">Dropdown-02</a></li>
+                  <li><a class="dropdown-item p-2 ps-4" href="#">Dropdown-03</a></li>
+                </ul>
+              </li>
+              <!-- Pages-->
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pages</a>
+              </li>
+              <!-- Blog-->
+              <li class="nav-item">
+                <a class="nav-link" href="#">Blog</a>
+              </li>
+              <!-- Contact-->
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
     <!-- MAIN-CONTENT --> 
     <div class="container-fluid main-content ">
         <div class="row justify-content-end fixed-height">
@@ -47,7 +116,6 @@
             </div>
         </div>
     </div>
-
     <!-- POPULAR HOUSES + SEARCH-->
     <div class="container">
         <!-- SEARCH -->
@@ -136,7 +204,7 @@
         <div class="row mb-5 gap-5 gap-lg-0">
             <!-- CARD 1-->
             <div class="col-12 col-lg-4">
-                <div class="card rounded-4 house-card">
+                <div class="card rounded-4 house-card shadow border-0">
                     <!-- CARD IMAGE-->
                     <div class="card-img-top position-relative card-img-hover house-card-img rounded-top-4">   
                         <img src="./gfx/house-01.jpg" class="img-fluid w-100 rounded-top-4 card-img" alt="...">
@@ -188,7 +256,7 @@
             </div>
             <!-- CARD 2-->
             <div class="col-12 col-lg-4">
-                <div class="card rounded-4 house-card">
+                <div class="card rounded-4 house-card shadow border-0">
                     <!-- CARD IMAGE-->
                     <div class="card-img-top position-relative card-img-hover house-card-img rounded-top-4">   
                         <img src="./gfx/house-02.jpg" class="img-fluid w-100 rounded-top-4 card-img" alt="...">
@@ -240,7 +308,7 @@
             </div>
             <!-- CARD 3-->
             <div class="col-12 col-lg-4">
-                <div class="card rounded-4 house-card">
+                <div class="card rounded-4 house-card shadow border-0">
                     <!-- CARD IMAGE-->
                     <div class="card-img-top position-relative card-img-hover house-card-img rounded-top-4">   
                         <img src="./gfx/house-03.jpg" class="img-fluid w-100 rounded-top-4 card-img" alt="...">
@@ -307,9 +375,25 @@
                         <div class="col-7 about-us-left-big mt-5 pt-3 ps-xl-0 ps-md-1">
                             <div class="position-relative">
                                 <img src="./gfx/about-big.jpg" alt="">
-                                <!-- PLAY BUTTON-->
-                                <div class="about-us-left-play ">
+                                <!-- PLAY BUTTON WITH MODAL TRIGGER-->
+                                <div class="about-us-left-play " data-bs-toggle="modal" data-bs-target="#aboutusmodal">
                                     <i class="fa-solid fa-play fa-lg "></i>
+                                </div>                            
+                                <!-- MODAL -->
+                                <div class="modal fade" id="aboutusmodal" tabindex="-1" aria-labelledby="aboutusmodalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <!-- Modal Header-->
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="aboutusmodalLabel">Rents Modal</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <!-- Modal Body with youtube embedded-->
+                                            <div class="modal-body">
+                                                <iframe width="100%" height="300px" src="https://www.youtube.com/embed/kxM-1WY6IXA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -733,7 +817,7 @@
                     </div>
                 </div>
             </div>
-          </div>
+        </div>
       </footer>
 
 
