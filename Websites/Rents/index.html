@@ -16,15 +16,101 @@
     <!-- NAVBAR -->
     
 
-    <!-- POPULAR HOUSES-->
+
+
+
+    <!-- MAIN-CONTENT --> 
+    <div class="container-fluid main-content ">
+        <div class="row justify-content-end fixed-height">
+            <div class="col-12 col-lg-6 mobile-bg-img ">
+                <div class="row px-lg-5 ps-3 px-sm-5 mx-sm-3">
+                    <div class="col-12 p-3 py-5">
+                        <h1 class="fw-bold py-3">Buy and sell properties in the fastest way</h1>
+                        <p class="text-secondary">Explore new apartments, land estates, house and land, home designs, builders, apartments and more</p>
+                    </div>
+                    <div class="col-5 col-lg-4">
+                        <h4 class="fw-semibold">1200+</h4>
+                        <p class="text-secondary">Premium product</p>
+                    </div>
+                    <div class=" col-5 col-lg-4">
+                        <h4 class="fw-semibold">15+</h4>
+                        <p class="text-secondary">Years of experience</p>
+                    </div>
+                    <div class=" col-5 col-lg-4">
+                        <h4 class="fw-semibold">146+</h4>
+                        <p class="text-secondary">Award winning</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Background image right side shown on LG sizes and bigger -->
+            <div class="col-12 col-lg-6 d-none d-lg-block p-0 desktop-bg-img">
+            </div>
+        </div>
+    </div>
+
+    <!-- POPULAR HOUSES + SEARCH-->
     <div class="container">
-        <div class="row">
-            <!-- RENT BUY SELL SEARCH TODO-->
-            <!-- NOTE 
-                BUTTON GROUP
-                
-                MINUS MARGIN
-             -->
+        <!-- SEARCH -->
+        <div class="row mx-3 mx-sm-0 house-search ">
+            <!-- SEARCH BUTTON GROUP-->
+            <div class="col-12 p-0 z-3">
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                    <label class="btn search-group-btn" for="btnradio1">Rent</label>
+                  
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                    <label class="btn search-group-btn" for="btnradio2">Buy</label>
+                  
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                    <label class="btn search-group-btn" for="btnradio3">Sell</label>
+                </div>
+            </div>
+            <!-- SEARCH FORM-->
+            <div class="col-12 z-3">
+                <form>
+                    <div class="row shadow house-search-form justify-content-center bg-white ">
+                            <!-- Location-->
+                            <div class="col-12 col-lg-3 p-3 pb-0 pb-lg-4 ">
+                                <label for="" class="form-label">Location</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="" placeholder="Dhaka">
+                                    <span class="input-group-text">
+                                        <img src="./gfx/image.svg" alt="pin-image" >
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- Types-->
+                            <div class="col-12 col-lg-3 p-3 pb-0  pb-lg-4">
+                                <label for="" class="form-label">Types</label>
+                                <div class="input-group">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Apartment</option>
+                                        <option value="1">House</option>
+                                        <option value="2">Option 3</option>
+                                        <option value="3">Option 4</option>
+                                    </select>
+                                    <span class="input-group-text">
+                                        <img src="./gfx/image (1).svg" alt="house-image">
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- Budget-->
+                            <div class="col-12 col-lg-3 p-3 pb-0  pb-lg-4">
+                                <label for="" class="form-label">Budget</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="Average Price">
+                                    <span class="input-group-text">
+                                        <img src="./gfx/image (2).svg" alt="dollar-image" >
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- Search Button-->
+                            <div class="col-12 col-lg-2 p-3 pb-lg-4 align-self-end">
+                                <input type="submit" value="Submit" class="btn btn-primary w-100" >
+                            </div>
+                    </div>
+                </form>
+            </div>
         </div>
         <!-- POPULAR HOUSES HEADING-->
         <div class="row my-5">
@@ -52,7 +138,7 @@
             <div class="col-12 col-lg-4">
                 <div class="card rounded-4 house-card">
                     <!-- CARD IMAGE-->
-                    <div class="card-img-top position-relative card-img-hover house-card-img ">   
+                    <div class="card-img-top position-relative card-img-hover house-card-img rounded-top-4">   
                         <img src="./gfx/house-01.jpg" class="img-fluid w-100 rounded-top-4 card-img" alt="...">
                         <div class="position-absolute house-card-img-button ">
                             <p class= "m-0">Company Reality</p>
@@ -104,7 +190,7 @@
             <div class="col-12 col-lg-4">
                 <div class="card rounded-4 house-card">
                     <!-- CARD IMAGE-->
-                    <div class="card-img-top position-relative card-img-hover house-card-img ">   
+                    <div class="card-img-top position-relative card-img-hover house-card-img rounded-top-4">   
                         <img src="./gfx/house-02.jpg" class="img-fluid w-100 rounded-top-4 card-img" alt="...">
                         <div class="position-absolute house-card-img-button ">
                             <p class= "m-0">Company Reality</p>
@@ -156,7 +242,7 @@
             <div class="col-12 col-lg-4">
                 <div class="card rounded-4 house-card">
                     <!-- CARD IMAGE-->
-                    <div class="card-img-top position-relative card-img-hover house-card-img ">   
+                    <div class="card-img-top position-relative card-img-hover house-card-img rounded-top-4">   
                         <img src="./gfx/house-03.jpg" class="img-fluid w-100 rounded-top-4 card-img" alt="...">
                         <div class="position-absolute house-card-img-button ">
                             <p class= "m-0">Company Reality</p>

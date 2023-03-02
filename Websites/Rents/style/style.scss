@@ -11,6 +11,7 @@
 
 /*BACKGROUND COLORS*/
 $navbar-burger-bg: #e9e8ed;
+$search-buttongroup-bg: #f3f4f8;
 $main-bg: #f5f8ff;
 $content-bg: #fcfcfc;
 $footer-bg: #f5f8ff;
@@ -19,6 +20,7 @@ $footer-bottom-bg: #434ce7;
 /* COLORS*/
 $main-blue: #434ce7;
 $main-light-blue: #dfeafe;
+
 
 
 @mixin sectiontitle(){
@@ -92,18 +94,115 @@ $main-light-blue: #dfeafe;
 // }
 
 
-/* POPULAR SECTION*/
+/* MAIN CONTENT STYLE*/
+
+.main-content{
+    background-color: $main-bg;
+}
+
+
+// Fixed height so it dosent overlap with House Search 
+.fixed-height{
+    height: 550px; // Responsive TODO
+}
+
+// Media query to show background image when size is < LG Breakpoint
+@media only screen and (max-width: 992px) {
+    .mobile-bg-img {
+        position: relative; 
+        height: 550px;
+        width: 100%;
+        z-index: 1;
+    }
+    
+    .mobile-bg-img::before {    
+          content: "";
+          background-size: cover;
+          position: absolute;
+          background-image: url(../gfx/hero.jpg);
+          top: 0px;
+          right: 0px;
+          bottom: 0px;
+          left: 0px;
+          opacity: 0.1;
+          z-index: 1 !important;
+    }
+  }
+
+// Background image for desktop on right side
+.desktop-bg-img{
+    background-image: url(../gfx/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* HOUSE SEARCH STYLING*/
+.house-search{
+    margin-top: -80px;
+    .btn-check:checked + .btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check) + .btn:active {
+        color: black;
+        background-color: $main-light-blue;
+      }
+      .search-group-btn{
+        border: none !important;
+        outline: none !important;
+        background-color: $search-buttongroup-bg;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        width: 70px;
+        font-weight: 500;
+        &:hover{
+            background-color: $search-buttongroup-bg;
+        }
+      }
+    .house-search-form{
+        border-top-left-radius: 0px;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+    .form-label{
+        font-size: 14px
+    }
+    .form-select {
+        background-image: none
+    }
+    .input-group-text{
+        background-color: white;
+        border-left: none;
+        img{
+            stroke: $main-blue !important;
+        }
+    }
+    .form-select, .form-control{
+        border-right: none !important;
+        &:focus{
+            box-shadow: none;
+            border-color: rgba($color: black, $alpha: 0.1);
+        }
+    }
+    
+}
+
+
+
+/* POPULAR HOUSES SECTION*/
 .popular-section-subtitle{
     @include sectiontitle()
 }
 
-/* House Card Styling*/
+/* House Card */
 .house-card{
     .card-img-hover{   
         overflow: hidden;
         .card-img{
             transition: transform .5s ease;
             width: 100%;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
         }
         &:hover .card-img{
             transform: scale(1.2);
@@ -131,13 +230,13 @@ $main-light-blue: #dfeafe;
     }
     .house-card-text{
         font-size: 12px; // Media Querys ?? TODO Check Later
-        
+    }
+    .card-footer{
+        background-color: rgba($color: black, $alpha: 0.0); 
     }
     
 }   
-.card-footer{
-    // background-color: white; ????
-}
+
 
 
 /* ABOUT US SECTION STYLING*/

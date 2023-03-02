@@ -8,7 +8,91 @@
 /* COLORS*/
 /* NAVBAR STYLING*/
 /*Remove outline on burger menu click*/
-/* POPULAR SECTION*/
+/* MAIN CONTENT STYLE*/
+.main-content {
+  background-color: #f5f8ff;
+}
+
+.fixed-height {
+  height: 550px;
+}
+
+@media only screen and (max-width: 992px) {
+  .mobile-bg-img {
+    position: relative;
+    height: 550px;
+    width: 100%;
+    z-index: 1;
+  }
+  .mobile-bg-img::before {
+    content: "";
+    background-size: cover;
+    position: absolute;
+    background-image: url(../gfx/hero.jpg);
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.1;
+    z-index: 1 !important;
+  }
+}
+.desktop-bg-img {
+  background-image: url(../gfx/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* HOUSE SEARCH STYLING*/
+.house-search {
+  margin-top: -80px;
+}
+.house-search .btn-check:checked + .btn, .house-search .btn.active, .house-search .btn.show, .house-search .btn:first-child:active, .house-search :not(.btn-check) + .btn:active {
+  color: black;
+  background-color: #dfeafe;
+}
+.house-search .search-group-btn {
+  border: none !important;
+  outline: none !important;
+  background-color: #f3f4f8;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  width: 70px;
+  font-weight: 500;
+}
+.house-search .search-group-btn:hover {
+  background-color: #f3f4f8;
+}
+.house-search .house-search-form {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.house-search .form-label {
+  font-size: 14px;
+}
+.house-search .form-select {
+  background-image: none;
+}
+.house-search .input-group-text {
+  background-color: white;
+  border-left: none;
+}
+.house-search .input-group-text img {
+  stroke: #434ce7 !important;
+}
+.house-search .form-select, .house-search .form-control {
+  border-right: none !important;
+}
+.house-search .form-select:focus, .house-search .form-control:focus {
+  box-shadow: none;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* POPULAR HOUSES SECTION*/
 .popular-section-subtitle {
   color: #434ce7;
   display: flex;
@@ -25,13 +109,15 @@
   align-self: center;
 }
 
-/* House Card Styling*/
+/* House Card */
 .house-card .card-img-hover {
   overflow: hidden;
 }
 .house-card .card-img-hover .card-img {
   transition: transform 0.5s ease;
   width: 100%;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 .house-card .card-img-hover:hover .card-img {
   transform: scale(1.2);
@@ -57,6 +143,9 @@
 }
 .house-card .house-card-text {
   font-size: 12px;
+}
+.house-card .card-footer {
+  background-color: rgba(0, 0, 0, 0);
 }
 
 /* ABOUT US SECTION STYLING*/
