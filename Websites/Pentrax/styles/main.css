@@ -1,3 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("../../font/circular-std-medium-500.ttf?family=Circular");
+@font-face {
+  font-family: "Circular";
+  src: url(../../font/circular-std-medium-500.ttf);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #233d63;
+}
+
+.text-primary {
+  color: #ff7855 !important;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+}
+
+.card .card-socials {
+  opacity: 0.5;
+}
+.card .card-body {
+  background-color: #f4f6fb;
+}
+.card:hover .card-body {
+  background-color: #ff7855;
+  transition: 0.5s;
+}
+.card:hover .card-body .card-title {
+  color: white !important;
+}
+.card:hover .card-body .card-subtitle {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+.card:hover .card-body .card-socials > a > i {
+  color: white !important;
+}
+
+/* https://www.codeply.com/p/0CWffz76Q9  SLIDER STYLING USING CODEPLY EXAMPLE*/
+@media (max-width: 575px) {
+  .carousel-inner .carousel-item > div {
+    display: none;
+  }
+  .carousel-inner .carousel-item > div:first-child {
+    display: block;
+  }
+}
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
+}
+
+/*SM BREAKPOINT 3 COLS*/
+@media (min-width: 576px) {
+  .carousel-inner .carousel-item-end.active,
+  .carousel-inner .carousel-item-next {
+    transform: translateX(50%);
+  }
+  .carousel-inner .carousel-item-start.active,
+  .carousel-inner .carousel-item-prev {
+    transform: translateX(-50%);
+  }
+  .carousel-inner .carousel-item-end,
+  .carousel-inner .carousel-item-start {
+    transform: translateX(0);
+  }
+}
+/*MD BREAKPOINT 3 COLS*/
+@media (min-width: 768px) {
+  .carousel-inner .carousel-item-end.active,
+  .carousel-inner .carousel-item-next {
+    transform: translateX(33.33%);
+  }
+  .carousel-inner .carousel-item-start.active,
+  .carousel-inner .carousel-item-prev {
+    transform: translateX(-33.33%);
+  }
+  .carousel-inner .carousel-item-end,
+  .carousel-inner .carousel-item-start {
+    transform: translateX(0);
+  }
+}
+/*LG BREAKPOINT 4 COLS*/
+@media (min-width: 992px) {
+  .carousel-inner .carousel-item-end.active,
+  .carousel-inner .carousel-item-next {
+    transform: translateX(25%);
+  }
+  .carousel-inner .carousel-item-start.active,
+  .carousel-inner .carousel-item-prev {
+    transform: translateX(-25%);
+  }
+  .carousel-inner .carousel-item-end,
+  .carousel-inner .carousel-item-start {
+    transform: translateX(0);
+  }
+}
 .banner {
   background-image: url(../Gfx/bg-wide-2.jpg);
 }/*# sourceMappingURL=main.css.map */

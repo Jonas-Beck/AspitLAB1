@@ -1,0 +1,26 @@
+
+// Teams Card
+.card{
+    .card-socials{
+        opacity: 0.5;
+    }
+    .card-body{
+        background-color: $card-bg;
+    }
+    &:hover .card-body{
+        background-color: $primary-color;
+        transition: 0.5s;
+        .card-title{
+            color: white !important;
+            
+        }
+        .card-subtitle{
+            color: rgba($color: #ffffff, $alpha: 0.8) !important; 
+        }
+        .card-socials > a > i{
+            color: white !important;
+        }
+    }
+}
+
+

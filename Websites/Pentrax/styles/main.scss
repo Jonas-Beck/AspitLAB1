@@ -15,9 +15,9 @@
 @import 'layout/footer';
 
 @import 'components/buttons';
-// @import 'components/carousel';
-// @import 'components/cover';
-// @import 'components/dropdown';
+@import 'components/cards';
+@import 'components/carousel';
+
 
 @import 'pages/home';
 @import 'pages/contact';
@@ -29,9 +29,3 @@
 // NOT USED IN THIS PROJECT
 //@import 'themes/theme';
 //@import 'themes/admin';
-
-
-// TEMP
-.banner{ // Correct Placement ?? (Used on all sub pages) 
-    background-image: url(../Gfx/bg-wide-2.jpg); // url(../../Gfx/bg-wide-2.jpg)
-}
