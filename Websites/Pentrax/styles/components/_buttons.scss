@@ -3,7 +3,8 @@
     border-radius: 5px;
     color: $primary-color;
     border: none;
-    @media (min-width: 992px) { // Header specific styling ??
+    // Only show hover effect on LG + Screen sizes
+    @media (min-width: 992px) { // Header specific styling ?? 
         @include diagonalanimation($primary-color, white);
     } 
 }

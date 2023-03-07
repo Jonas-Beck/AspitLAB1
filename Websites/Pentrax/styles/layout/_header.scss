@@ -12,10 +12,16 @@ header{
         .dropdown-toggle::after{
             display: none !important;
         }
-        //Show dropdown on hover
-        .dropdown:hover .dropdown-menu { 
-            display: block;
-        }
+        @media (min-width: 992px) { 
+            //Show dropdown on hover on lG + screen sizes
+            .dropdown:hover .dropdown-menu { 
+                display: block;
+            }
+            // Show boxshadow on dropdown menu on LG + screen sizes
+            .dropdown-menu{
+                box-shadow: 0 .5rem 1rem rgba(black, .15);
+            }
+        } 
         //Hover color change 
         .nav-link:hover, .dropdown-item:hover {
             color: $primary-color;
