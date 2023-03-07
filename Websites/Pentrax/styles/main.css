@@ -1,15 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("../../font/circular-std-medium-500.ttf?family=Circular");
+p {
+  margin-bottom: 0px;
+}
+
 @font-face {
   font-family: "Circular";
   src: url(../../font/circular-std-medium-500.ttf);
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+header > * {
+  color: #233d63;
+}
+
+main p {
+  font-family: "Poppins", sans-serif;
+}
+main h1, main h2, main h3, main h4, main h5, main h6 {
+  color: #233d63;
+}
+
+footer p {
+  font-family: "Poppins", sans-serif;
+}
+footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 {
   color: #233d63;
 }
 
@@ -17,8 +30,159 @@ h6 {
   color: #ff7855 !important;
 }
 
-p {
-  font-family: "Poppins", sans-serif;
+header {
+  /* NAVBAR STYLING*/
+  /*Remove outline on burger menu click*/
+}
+header .navbar {
+  background-color: #ffffff;
+}
+header .navbar a {
+  text-decoration: none;
+  color: #233d63;
+}
+header .navbar .dropdown-menu {
+  border: none;
+}
+header .navbar .dropdown-toggle::after {
+  display: none !important;
+}
+header .navbar .dropdown:hover .dropdown-menu {
+  display: block;
+}
+header .navbar .nav-link:hover, header .navbar .dropdown-item:hover {
+  color: #ff7855;
+}
+header .navbar .navbar-toggler {
+  background-color: white;
+  border-radius: 0px;
+  padding: 10px;
+}
+header .navbar-toggler:focus,
+header .navbar-toggler:active,
+header .navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+}
+header .banner {
+  background-image: url(../Gfx/bg-wide-2.jpg);
+}
+
+@media (min-width: 200px) {
+  .animate {
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+  }
+}
+@keyframes slidein {
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+}
+.slidein {
+  animation-name: slidein;
+}
+
+footer {
+  background-color: #f4f6fb;
+}
+footer .footer-phone {
+  font-size: large;
+}
+footer .footer-header {
+  display: flex;
+  flex-direction: column;
+}
+footer .footer-header hr {
+  width: 60px;
+  border: 1.5px solid #ff7855;
+  opacity: 1;
+}
+footer .footer-header h5 {
+  margin: 0px !important;
+  font-weight: bold;
+}
+footer .footer-link-nav a:hover {
+  transition: 0.5s;
+  transform: translateX(5px);
+  color: #ff7855 !important;
+}
+footer .input-group input {
+  border-radius: 0;
+  border: none;
+  padding: 15px;
+  border-right: none;
+}
+footer .input-group input:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+footer .input-group input::placeholder {
+  opacity: 0.5;
+}
+footer .input-group span {
+  border-left: none;
+  background-color: white;
+  color: #ff7855;
+  border-radius: 0;
+  border: none;
+}
+footer .footer-btn {
+  background-color: #ff7855;
+  padding: 10px 20px 10px 20px;
+  border-radius: 25px;
+  color: white;
+}
+footer .footer-btn:hover {
+  transition: 0.5s;
+  background-color: white;
+  color: black;
+}
+footer .footer-bottom {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.header-btn {
+  background-color: #ffe9e5;
+  border-radius: 5px;
+  color: #ff7855;
+  border: none;
+}
+@media (min-width: 992px) {
+  .header-btn {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .header-btn:hover {
+    color: white;
+    transition: 0.3s;
+  }
+  .header-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 500%;
+    height: 1000%;
+    background: #ff7855;
+    z-index: -1;
+    transform: translateX(160px) translateY(100px) rotate(45deg);
+    transition: transform 0.3s;
+  }
+  .header-btn:hover::after {
+    transform: translateY(-50%) translateX(25px) rotate(45deg);
+  }
 }
 
 .card .card-socials {
@@ -100,7 +264,4 @@ p {
   .carousel-inner .carousel-item-start {
     transform: translateX(0);
   }
-}
-.banner {
-  background-image: url(../Gfx/bg-wide-2.jpg);
 }/*# sourceMappingURL=main.css.map */

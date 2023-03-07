@@ -1,0 +1,10 @@
+.header-btn{ 
+    background-color: $primary-color-light;
+    border-radius: 5px;
+    color: $primary-color;
+    border: none;
+    @media (min-width: 992px) { // Header specific styling ??
+        @include diagonalanimation($primary-color, white);
+    } 
+}
+

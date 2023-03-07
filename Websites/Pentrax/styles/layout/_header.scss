@@ -1,0 +1,47 @@
+header{
+    /* NAVBAR STYLING*/
+    .navbar{
+        background-color: $header-bg;
+        a{
+            text-decoration: none;
+            color: $text-header-color;
+        }
+        .dropdown-menu{
+            border: none;
+        }
+        .dropdown-toggle::after{
+            display: none !important;
+        }
+        //Show dropdown on hover
+        .dropdown:hover .dropdown-menu { 
+            display: block;
+        }
+        //Hover color change 
+        .nav-link:hover, .dropdown-item:hover {
+            color: $primary-color;
+        }
+        .navbar-toggler{
+            background-color: white;
+            border-radius: 0px;
+            padding: 10px;
+        }
+    }
+
+    /*Remove outline on burger menu click*/
+    .navbar-toggler:focus,
+    .navbar-toggler:active,
+    .navbar-toggler-icon:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+    //  BANNER FOR SUB PAGES
+    .banner{ 
+        background-image: url(../Gfx/bg-wide-2.jpg); 
+    }
+}
+
+
+
+
+

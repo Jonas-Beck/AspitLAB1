@@ -1,0 +1,40 @@
+@mixin header-line{
+    
+    display: flex;
+    flex-direction: column;
+    hr{
+        width: 60px;
+        border: 1.5px solid $primary-color;
+        opacity: 1;
+    }
+    h5{
+        margin: 0px !important;
+        font-weight: bold;
+    }
+}
+
+// Hover Inspiration https://codepen.io/kzf/pen/LEEzew
+@mixin diagonalanimation($bg-color, $text-color){
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    &:hover{
+        color: $text-color;
+        transition: .3s;
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 500%;
+        height: 1000%;
+        background: $bg-color;
+        z-index: -1;
+        transform: translateX(160px) translateY(100px) rotate(45deg);
+        transition: transform .3s;
+    }
+    &:hover::after{
+        transform: translateY(-50%) translateX(25px) rotate(45deg);
+    }
+}

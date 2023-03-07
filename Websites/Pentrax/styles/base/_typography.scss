@@ -6,13 +6,29 @@
     src: url(../../font/circular-std-medium-500.ttf);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6{
+header > *{
     color: $text-header-color;
+    // font-family: 'Circular'; FIX LATER
+}
+main{
+    p{
+        font-family: 'Poppins', sans-serif;
+
+    }
+    h1, h2, h3, h4, h5, h6{
+    color: $text-header-color;
+    // font-family: 'Circular'; FIX LATER
+    }
+}
+footer{
+    p{
+        font-family: 'Poppins', sans-serif;
+
+    }
+    h1, h2, h3, h4, h5, h6{
+    color: $text-header-color;
+    // font-family: 'Circular'; FIX LATER
+    }
 }
 
 .text-primary{
@@ -20,6 +36,3 @@ h6{
 }
 
 
-p{
-    font-family: 'Poppins', sans-serif;
-}
