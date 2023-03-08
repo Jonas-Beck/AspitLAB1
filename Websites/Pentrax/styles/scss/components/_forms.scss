@@ -10,4 +10,7 @@
 }
 textarea{
     resize: none;
+    &:focus{
+        outline: 2px solid $contact-textare-outline !important;
+    }
 }
