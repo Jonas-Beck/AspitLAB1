@@ -1,0 +1,10 @@
+p{
+    margin-bottom: 0px;
+}
+
+
+@media (min-width: 1200px) { // FIXME Placement ??
+    .container{
+        max-width: 970px;
+    }
+}

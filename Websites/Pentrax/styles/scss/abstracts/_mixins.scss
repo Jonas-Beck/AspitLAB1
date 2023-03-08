@@ -35,6 +35,6 @@
         transition: transform .3s;
     }
     &:hover::after{
-        transform: translateY(-50%) translateX(25px) rotate(45deg);
+        transform: translateY(-70%) translateX(25px) rotate(45deg);
     }
 }
