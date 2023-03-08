@@ -171,6 +171,35 @@ footer .footer-bottom {
   }
 }
 
+.main-btn {
+  background-color: #ffe9e5;
+  border-radius: 5px;
+  color: #ff7855;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.main-btn:hover {
+  color: white;
+  transition: 0.3s;
+}
+.main-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 500%;
+  height: 1000%;
+  background: #ff7855;
+  z-index: -1;
+  transform: translateX(160px) translateY(100px) rotate(45deg);
+  transition: transform 0.3s;
+}
+.main-btn:hover::after {
+  transform: translateY(-70%) translateX(25px) rotate(45deg);
+}
+
 .card .card-socials {
   opacity: 0.5;
 }

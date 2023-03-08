@@ -1,11 +1,18 @@
-.header-btn{ 
+.header-btn{ // TODO Header specific ??
     background-color: $primary-color-light;
     border-radius: 5px;
     color: $primary-color;
     border: none;
     // Only show hover effect on LG + Screen sizes
-    @media (min-width: 992px) { // Header specific styling ?? 
+    @media (min-width: 992px) { 
         @include diagonalanimation($primary-color, white);
     } 
 }
 
+.main-btn{
+    background-color: $primary-color-light;
+    border-radius: 5px;
+    color: $primary-color;
+    border: none;
+    @include diagonalanimation($primary-color, white);
+}
