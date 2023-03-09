@@ -16,3 +16,15 @@
     border: none;
     @include diagonalanimation($primary-color, white);
 }
+
+.hero-btn{
+    background-color: $primary-color;
+    border-radius: 0px;
+    color: white;
+    border: none;
+    height: 60px;
+    @include diagonalanimation(white, $primary-color);
+    &:hover{
+        border: 1px solid $primary-color;
+    }
+}

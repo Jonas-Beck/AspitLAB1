@@ -1,0 +1,29 @@
+.hero-form-group{
+    border: 1px solid rgba($color: black, $alpha: 0.1);
+}
+
+.blog-tag-left{ // TODO Placement in files used in Blog page
+    background-color: $home-blog-bg1;
+    padding: 15px 20px 15px 20px;
+    border-radius: 5px;
+    top: -20px;
+    left: 20px;
+    font-size: small;
+}
+.blog-tag-right{ // TODO Placement in files used in Blog page
+    background-color: $home-blog-bg2;
+    padding: 15px 20px 15px 20px;
+    border-radius: 5px;
+    top: -20px;
+    left: 20px;
+    font-size: small;
+}
+.blog-desc{ 
+    width: 90%;
+    margin-top: -40px;
+    background-color: white;
+    border-radius: 5px;
+    p{
+        font-size: small;
+    }
+}

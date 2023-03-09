@@ -31,7 +31,7 @@
         height: 1000%;
         background: $bg-color;
         z-index: -1;
-        transform: translateX(160px) translateY(100px) rotate(45deg);
+        transform: translateX(145px) translateY(100px) rotate(45deg);
         transition: transform .3s;
     }
     &:hover::after{

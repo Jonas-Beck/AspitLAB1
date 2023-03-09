@@ -21,7 +21,7 @@ main p {
   font-family: "Poppins", sans-serif;
 }
 main h1, main h2, main h3, main h4, main h5, main h6 {
-  color: #233d63;
+  color: #233d63 !important;
 }
 
 footer p {
@@ -163,7 +163,7 @@ footer .footer-bottom {
     height: 1000%;
     background: #ff7855;
     z-index: -1;
-    transform: translateX(160px) translateY(100px) rotate(45deg);
+    transform: translateX(145px) translateY(100px) rotate(45deg);
     transition: transform 0.3s;
   }
   .header-btn:hover::after {
@@ -193,31 +193,93 @@ footer .footer-bottom {
   height: 1000%;
   background: #ff7855;
   z-index: -1;
-  transform: translateX(160px) translateY(100px) rotate(45deg);
+  transform: translateX(145px) translateY(100px) rotate(45deg);
   transition: transform 0.3s;
 }
 .main-btn:hover::after {
   transform: translateY(-70%) translateX(25px) rotate(45deg);
 }
 
-.card .card-socials {
+.hero-btn {
+  background-color: #ff7855;
+  border-radius: 0px;
+  color: white;
+  border: none;
+  height: 60px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.hero-btn:hover {
+  color: #ff7855;
+  transition: 0.3s;
+}
+.hero-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 500%;
+  height: 1000%;
+  background: white;
+  z-index: -1;
+  transform: translateX(145px) translateY(100px) rotate(45deg);
+  transition: transform 0.3s;
+}
+.hero-btn:hover::after {
+  transform: translateY(-70%) translateX(25px) rotate(45deg);
+}
+.hero-btn:hover {
+  border: 1px solid #ff7855;
+}
+
+.team-card .card-socials {
   opacity: 0.5;
 }
-.card .card-body {
+.team-card .card-body {
   background-color: #f4f6fb;
 }
-.card:hover .card-body {
+.team-card:hover .card-body {
   background-color: #ff7855;
   transition: 0.5s;
 }
-.card:hover .card-body .card-title {
+.team-card:hover .card-body .card-title {
   color: white !important;
 }
-.card:hover .card-body .card-subtitle {
+.team-card:hover .card-body .card-subtitle {
   color: rgba(255, 255, 255, 0.8) !important;
 }
-.card:hover .card-body .card-socials > a > i {
+.team-card:hover .card-body .card-socials > a > i {
   color: white !important;
+}
+
+.pricing-card {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.feedback-card .card-body:nth-child(1) {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: none;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.feedback-card .card-body:nth-child(1) i {
+  top: 0px;
+  opacity: 10%;
+}
+.feedback-card .card-body:nth-child(2) {
+  background-color: #f4f6fb;
+}
+.feedback-card:hover .card-body:nth-child(2) {
+  background-color: #ff7855;
+  transition: 0.5s;
+}
+.feedback-card:hover .card-body:nth-child(2) .card-title {
+  color: white !important;
+}
+.feedback-card:hover .card-body:nth-child(2) .card-subtitle {
+  color: rgba(255, 255, 255, 0.8) !important;
 }
 
 /* https://www.codeply.com/p/0CWffz76Q9  SLIDER STYLING USING CODEPLY EXAMPLE*/
@@ -293,6 +355,38 @@ textarea {
 }
 textarea:focus {
   outline: 2px solid #00aeff !important;
+}
+
+.hero-form-group {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.blog-tag-left {
+  background-color: #ff6448;
+  padding: 15px 20px 15px 20px;
+  border-radius: 5px;
+  top: -20px;
+  left: 20px;
+  font-size: small;
+}
+
+.blog-tag-right {
+  background-color: #00aeff;
+  padding: 15px 20px 15px 20px;
+  border-radius: 5px;
+  top: -20px;
+  left: 20px;
+  font-size: small;
+}
+
+.blog-desc {
+  width: 90%;
+  margin-top: -40px;
+  background-color: white;
+  border-radius: 5px;
+}
+.blog-desc p {
+  font-size: small;
 }
 
 .contact-info p {
