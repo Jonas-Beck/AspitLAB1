@@ -299,4 +299,38 @@ textarea:focus {
   font-size: small;
 }
 
+.hover-parent .hover-element {
+  transition: 0.5s;
+}
+.hover-parent:hover .hover-element {
+  scale: 1.3;
+}
+.hover-parent:hover h4 {
+  color: #ff7855;
+}
+
+.settings-box-1 {
+  width: 60px;
+  height: 60px;
+  background-color: #fcd8e1;
+}
+
+.settings-box-2 {
+  width: 60px;
+  height: 60px;
+  background-color: #ff9cdb;
+}
+
+.security-box-1 {
+  width: 60px;
+  height: 60px;
+  background-color: #dde8fa;
+}
+
+.security-box-2 {
+  width: 60px;
+  height: 60px;
+  background-color: #f5eb98;
+}
+
 /*# sourceMappingURL=main.css.map */
