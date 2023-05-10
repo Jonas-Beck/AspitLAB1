@@ -94,7 +94,7 @@
                         <div class="input-group hero-form-group p-1">
                             <input type="text" class="form-control p-3 border-0" placeholder="Enter your Email" aria-label="Recipient's username" aria-describedby="button-addon2">
                             <button class="hero-btn">
-                                <p class="p-2 px-3">Start Free Trial</p>
+                                <p class="p-2 px-3">Start Free Trial</p> <!-- TODO if input select hover button left border gone -->
                             </button>
                         </div>
                     </form>
@@ -294,8 +294,48 @@
         </div>
         <!-- Container Fluid for Screenshot carousel-->
         <div class="container-fluid">
-            <!-- TODO ADD CAROUSEL FOR SCREENSHOTS-->
+            <!-- TODO Fix Width between screenshots and middle screenshot height-->
             <!-- ROW ROW-COLS-5 HELP -->
+            <!-- Clients-->
+            <div class="row py-5">
+                <!--  CLIENTS CAROUSEL-->
+                <div class="col-12 text-center" > <!-- Opacity on auto slide-->
+                    <div class="carousel slide" data-bs-ride="carousel" id="screenshot-carousel">
+                        <div class="carousel-inner" role="listbox">
+                            <!-- CLIENT 1-->
+                            <div class="carousel-item active">
+                                <div class="col-12 col-sm-6 col-md-4 col-lg">
+                                    <img src="/Gfx/card (1).jpg" alt="Client1-Logo">
+                                </div>
+                            </div>
+                            <!-- CLIENT 2-->
+                            <div class="carousel-item">
+                                <div class="col-12 col-sm-6 col-md-4 col-lg">
+                                    <img src="/Gfx/card (2).jpg" alt="Client2-Logo">
+                                </div>
+                            </div>
+                            <!-- CLIENT 3-->
+                            <div class="carousel-item ">
+                                <div class="col-12 col-sm-6 col-md-4 col-lg">
+                                    <img src="/Gfx/card (3).jpg" alt="Client3-Logo">
+                                </div>
+                            </div>
+                            <!-- CLIENT 4-->
+                            <div class="carousel-item">
+                                <div class="col-12 col-sm-6 col-md-4 col-lg">
+                                    <img src="/Gfx/card (4).jpg" alt="Client4-Logo">
+                                </div>
+                            </div>
+                            <!-- CLIENT 4-->
+                            <div class="carousel-item">
+                                <div class="col-12 col-sm-6 col-md-4 col-lg">
+                                    <img src="/Gfx/card.jpg" alt="Client4-Logo">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="container">
             <!-- Easy Installation -->
@@ -440,8 +480,8 @@
             <!-- Clients-->
             <div class="row py-5">
                 <!--  CLIENTS CAROUSEL-->
-                <div class="col-12 text-center opacity-50"> <!-- Opacity on auto slide-->
-                    <div class="carousel slide" data-bs-ride="carousel">
+                <div class="col-12 text-center opacity-50" > <!-- Opacity on auto slide-->
+                    <div class="carousel slide" data-bs-ride="carousel" id="clients-carousel">
                         <div class="carousel-inner" role="listbox">
                             <!-- CLIENT 1-->
                             <div class="carousel-item active">

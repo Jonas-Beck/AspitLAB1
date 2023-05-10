@@ -1,5 +1,4 @@
 @mixin header-line{
-    
     display: flex;
     flex-direction: column;
     hr{
@@ -37,4 +36,13 @@
     &:hover::after{
         transform: translateY(-70%) translateX(25px) rotate(45deg);
     }
+}
+
+@mixin blog-type($bg-color){
+    background-color: $bg-color;
+    padding: 15px 20px 15px 20px;
+    border-radius: 5px;
+    top: -20px;
+    left: 20px;
+    font-size: small;
 }

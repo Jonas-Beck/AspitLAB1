@@ -282,66 +282,130 @@ footer .footer-bottom {
   color: rgba(255, 255, 255, 0.8) !important;
 }
 
-/* https://www.codeply.com/p/0CWffz76Q9  SLIDER STYLING USING CODEPLY EXAMPLE*/
+#clients-carousel {
+  /* https://www.codeply.com/p/0CWffz76Q9  SLIDER STYLING USING CODEPLY EXAMPLE*/
+  /*SM BREAKPOINT 3 COLS*/
+  /*MD BREAKPOINT 3 COLS*/
+  /*LG BREAKPOINT 4 COLS*/
+}
 @media (max-width: 575px) {
-  .carousel-inner .carousel-item > div {
+  #clients-carousel .carousel-inner .carousel-item > div {
     display: none;
   }
-  .carousel-inner .carousel-item > div:first-child {
+  #clients-carousel .carousel-inner .carousel-item > div:first-child {
     display: block;
   }
 }
-.carousel-inner .carousel-item.active,
-.carousel-inner .carousel-item-next,
-.carousel-inner .carousel-item-prev {
+#clients-carousel .carousel-inner .carousel-item.active,
+#clients-carousel .carousel-inner .carousel-item-next,
+#clients-carousel .carousel-inner .carousel-item-prev {
   display: flex;
 }
-
-/*SM BREAKPOINT 3 COLS*/
 @media (min-width: 576px) {
-  .carousel-inner .carousel-item-end.active,
-  .carousel-inner .carousel-item-next {
+  #clients-carousel .carousel-inner .carousel-item-end.active,
+  #clients-carousel .carousel-inner .carousel-item-next {
     transform: translateX(50%);
   }
-  .carousel-inner .carousel-item-start.active,
-  .carousel-inner .carousel-item-prev {
+  #clients-carousel .carousel-inner .carousel-item-start.active,
+  #clients-carousel .carousel-inner .carousel-item-prev {
     transform: translateX(-50%);
   }
-  .carousel-inner .carousel-item-end,
-  .carousel-inner .carousel-item-start {
+  #clients-carousel .carousel-inner .carousel-item-end,
+  #clients-carousel .carousel-inner .carousel-item-start {
     transform: translateX(0);
   }
 }
-/*MD BREAKPOINT 3 COLS*/
 @media (min-width: 768px) {
-  .carousel-inner .carousel-item-end.active,
-  .carousel-inner .carousel-item-next {
+  #clients-carousel .carousel-inner .carousel-item-end.active,
+  #clients-carousel .carousel-inner .carousel-item-next {
     transform: translateX(33.33%);
   }
-  .carousel-inner .carousel-item-start.active,
-  .carousel-inner .carousel-item-prev {
+  #clients-carousel .carousel-inner .carousel-item-start.active,
+  #clients-carousel .carousel-inner .carousel-item-prev {
     transform: translateX(-33.33%);
   }
-  .carousel-inner .carousel-item-end,
-  .carousel-inner .carousel-item-start {
+  #clients-carousel .carousel-inner .carousel-item-end,
+  #clients-carousel .carousel-inner .carousel-item-start {
     transform: translateX(0);
   }
 }
-/*LG BREAKPOINT 4 COLS*/
 @media (min-width: 992px) {
-  .carousel-inner .carousel-item-end.active,
-  .carousel-inner .carousel-item-next {
+  #clients-carousel .carousel-inner .carousel-item-end.active,
+  #clients-carousel .carousel-inner .carousel-item-next {
     transform: translateX(25%);
   }
-  .carousel-inner .carousel-item-start.active,
-  .carousel-inner .carousel-item-prev {
+  #clients-carousel .carousel-inner .carousel-item-start.active,
+  #clients-carousel .carousel-inner .carousel-item-prev {
     transform: translateX(-25%);
   }
-  .carousel-inner .carousel-item-end,
-  .carousel-inner .carousel-item-start {
+  #clients-carousel .carousel-inner .carousel-item-end,
+  #clients-carousel .carousel-inner .carousel-item-start {
     transform: translateX(0);
   }
 }
+
+#screenshot-carousel {
+  /* https://www.codeply.com/p/0CWffz76Q9  SLIDER STYLING USING CODEPLY EXAMPLE*/
+  /*SM BREAKPOINT 3 COLS*/
+  /*MD BREAKPOINT 3 COLS*/
+  /*LG BREAKPOINT 5 COLS*/
+}
+@media (max-width: 575px) {
+  #screenshot-carousel .carousel-inner .carousel-item > div {
+    display: none;
+  }
+  #screenshot-carousel .carousel-inner .carousel-item > div:first-child {
+    display: block;
+  }
+}
+#screenshot-carousel .carousel-inner .carousel-item.active,
+#screenshot-carousel .carousel-inner .carousel-item-next,
+#screenshot-carousel .carousel-inner .carousel-item-prev {
+  display: flex;
+}
+@media (min-width: 576px) {
+  #screenshot-carousel .carousel-inner .carousel-item-end.active,
+  #screenshot-carousel .carousel-inner .carousel-item-next {
+    transform: translateX(50%);
+  }
+  #screenshot-carousel .carousel-inner .carousel-item-start.active,
+  #screenshot-carousel .carousel-inner .carousel-item-prev {
+    transform: translateX(-50%);
+  }
+  #screenshot-carousel .carousel-inner .carousel-item-end,
+  #screenshot-carousel .carousel-inner .carousel-item-start {
+    transform: translateX(0);
+  }
+}
+@media (min-width: 768px) {
+  #screenshot-carousel .carousel-inner .carousel-item-end.active,
+  #screenshot-carousel .carousel-inner .carousel-item-next {
+    transform: translateX(33.33%);
+  }
+  #screenshot-carousel .carousel-inner .carousel-item-start.active,
+  #screenshot-carousel .carousel-inner .carousel-item-prev {
+    transform: translateX(-33.33%);
+  }
+  #screenshot-carousel .carousel-inner .carousel-item-end,
+  #screenshot-carousel .carousel-inner .carousel-item-start {
+    transform: translateX(0);
+  }
+}
+@media (min-width: 992px) {
+  #screenshot-carousel .carousel-inner .carousel-item-end.active,
+  #screenshot-carousel .carousel-inner .carousel-item-next {
+    transform: translateX(20%);
+  }
+  #screenshot-carousel .carousel-inner .carousel-item-start.active,
+  #screenshot-carousel .carousel-inner .carousel-item-prev {
+    transform: translateX(-20%);
+  }
+  #screenshot-carousel .carousel-inner .carousel-item-end,
+  #screenshot-carousel .carousel-inner .carousel-item-start {
+    transform: translateX(0);
+  }
+}
+
 .form-select:focus, .form-control:focus {
   box-shadow: none;
   border-color: rgba(0, 0, 0, 0.1);

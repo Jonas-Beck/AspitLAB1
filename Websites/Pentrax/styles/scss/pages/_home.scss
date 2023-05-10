@@ -3,21 +3,13 @@
 }
 
 .blog-tag-left{ // TODO Placement in files used in Blog page
-    background-color: $home-blog-bg1;
-    padding: 15px 20px 15px 20px;
-    border-radius: 5px;
-    top: -20px;
-    left: 20px;
-    font-size: small;
+    @include blog-type($home-blog-bg1)
 }
+
 .blog-tag-right{ // TODO Placement in files used in Blog page
-    background-color: $home-blog-bg2;
-    padding: 15px 20px 15px 20px;
-    border-radius: 5px;
-    top: -20px;
-    left: 20px;
-    font-size: small;
+    @include blog-type($home-blog-bg2)
 }
+
 .blog-desc{ 
     width: 90%;
     margin-top: -40px;
