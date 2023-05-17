@@ -1,6 +1,3 @@
-// TODO CARD STYLING FOR ALL CARDS INSTEAD OF PAGE SPECIFIC STYLING
-
-
 // Teams Card
 .team-card{
     .card-socials{
@@ -58,3 +55,72 @@
     }
 }
 
+
+/*Blog Page Cards*/
+.blog-card {
+    .blog-tag {
+        @include blog-type($blog-catagory-bg)
+    }
+    .blog-play{
+        //Placement
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        //Circle size and colors
+        color: $primary-color;
+        background-color: white;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+
+        // Center Arrow
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        //Hover effekt
+        @include btn-hover($primary-color, white)
+    }
+    .blog-slide{
+        left: 5%;
+        right: 5%;
+        top: 50%;
+        i{
+            background-color: white;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            // Center in circle
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            //Hover effekt
+            @include btn-hover($primary-color, white)
+
+        }
+    }
+}
+
+// Blog Aside Contact Card
+.aside-overlay-card{
+    .card-img-overlay {
+        background-color: rgba($color: $text-header-color, $alpha: 0.8);
+        padding: 0px 25px;
+    }
+    a{ 
+        margin-top: 5px;
+        text-decoration: none;
+        align-self: center;
+        border-radius: 5px;
+        color: white;
+        padding: 10px 30px;
+        background-color: $primary-color;
+        // Hover Effekt
+        transition: .5s;
+        &:hover{
+            background-color: darken($color: $primary-color, $amount: 5); // Example Hover effekt
+        }
+    }
+}

@@ -20,11 +20,27 @@ header{
             // Show boxshadow on dropdown menu on LG + screen sizes
             .dropdown-menu{
                 box-shadow: 0 .5rem 1rem rgba(black, .15);
+                .dropdown-item:active{
+                    // Bootstrap5 Tertiary Color
+                    background-color: rgba(173, 181, 189, 0.2);
+                    color: $primary-color;
+                }
             }
         } 
         //Hover color change 
         .nav-link:hover, .dropdown-item:hover {
             color: $primary-color;
+        }
+        // Override default border radius on hover
+        .dropdown-menu{
+            li:first-child .dropdown-item:hover {
+                border-top-left-radius: 0.375rem;
+                border-top-right-radius: 0.375rem;
+            }
+            li:last-child .dropdown-item:hover {
+                border-bottom-left-radius: 0.375rem;
+                border-bottom-right-radius: 0.375rem;
+            }
         }
         .navbar-toggler{
             background-color: white;

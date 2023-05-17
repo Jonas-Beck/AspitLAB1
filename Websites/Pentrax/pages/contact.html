@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="../styles/css/main.css">
     <!-- Font Awesome Link-->
     <script src="https://kit.fontawesome.com/da2cc9f736.js" crossorigin="anonymous"></script>
+    <!-- Mapbox style Link-->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css' rel='stylesheet'/>
 </head>
 <body>
     <!-- HEADER-->
@@ -86,7 +88,7 @@
                         <h1 class=" fw-semibold">Contact Us</h1>
                     </div>
                     <div class="col-12">
-                        <p class=" text-secondary fw-semibold">Home &bull; Contact</p>
+                        <p class=" text-secondary">Home &bull; Contact</p>
                     </div>
                 </div>
             </div>
@@ -96,8 +98,11 @@
         <div class="container my-5">
             <!-- CONTACT MAP-->
             <div class="row my-4">
-                <div class="col-12 text-center"> <!-- TODO CUSTOM EMBEDDED MAP (Mapbox / Leafletjs / )-->
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4004.966939361275!2d9.523562871110677!3d55.7113840255385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464c825a320c7019%3A0xe8c7d0ed90b81b33!2sCampus%20Vejle!5e0!3m2!1sda!2sdk!4v1678265721232!5m2!1sda!2sdk" width="100%" height="350px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="col-12 text-center"> 
+                    <!-- Mapbox -->
+                    <div id="map"></div>    
+                    <!--Google maps -->
+                    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4004.966939361275!2d9.523562871110677!3d55.7113840255385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464c825a320c7019%3A0xe8c7d0ed90b81b33!2sCampus%20Vejle!5e0!3m2!1sda!2sdk!4v1678265721232!5m2!1sda!2sdk" width="100%" height="350px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
                 </div>
             </div>
             <!-- CONTACT TITLE-->
@@ -116,7 +121,7 @@
                     <div class="row contact-info">
                         <!-- Office Address-->  
                         <div class="col-12 col-lg-12 col-md-4 d-flex align-items-center gap-4 pb-4">
-                            <i class="fa-solid fa-location-pin text-primary fa-2xl pb-4 ps-1"></i> <!-- TODO NEW PIN ICON-->
+                            <i class="fa-solid fa-location-dot text-primary fa-2xl pb-4 ps-1"></i> 
                             <div>
                                 <h4 class="fw-semibold">Office Address</h4>
                                 <p class="text-secondary pb-1">848 E 28th ST, BROOKLYN </p>
@@ -249,7 +254,12 @@
     <script src="../node_modules/@popperjs/core/dist/umd/popper.js"></script>
     <!-- Bootstrap5 Javascript-->
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    <!-- Carousel Script-->
-    <script src="../js/carousel.js"></script>
+    <!-- Mapbox Scrit-->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js'></script>
+    <!-- Mapbox Script-->
+    <script src="../js/mapbox.js"></script>
+
 </body>
 </html>
+
+

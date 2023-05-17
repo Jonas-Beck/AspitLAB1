@@ -8,8 +8,10 @@
 
 header > *{
     color: $text-header-color;
-    // font-family: 'Circular'; FIX LATER
+    font-family: 'Circular'; 
 }
+
+
 main{
     p{
         font-family: 'Poppins', sans-serif;
@@ -17,9 +19,10 @@ main{
     }
     h1, h2, h3, h4, h5, h6{
     color: $text-header-color !important;
-    // font-family: 'Circular'; FIX LATER
+    font-family: 'Circular';
     }
 }
+
 footer{
     p{
         font-family: 'Poppins', sans-serif;
@@ -27,7 +30,7 @@ footer{
     }
     h1, h2, h3, h4, h5, h6{
     color: $text-header-color;
-    // font-family: 'Circular'; FIX LATER
+    font-family: 'Circular';
     }
 }
 
