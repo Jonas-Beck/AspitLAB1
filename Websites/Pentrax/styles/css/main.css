@@ -67,7 +67,8 @@ header .navbar .dropdown-toggle::after {
     color: #ff7855;
   }
 }
-header .navbar .nav-link:hover, header .navbar .dropdown-item:hover {
+header .navbar .nav-link:hover,
+header .navbar .dropdown-item:hover {
   color: #ff7855;
 }
 header .navbar .dropdown-menu li:first-child .dropdown-item:hover {
@@ -90,7 +91,7 @@ header .navbar-toggler-icon:focus {
   box-shadow: none;
 }
 header .banner {
-  background-image: url(../../../Gfx/bg-wide-2.jpg);
+  background-image: url("/AspitLAB1/Websites/Pentrax/Gfx/bg-wide.jpg");
 }
 
 footer {
